@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Banquet & Private Celebrations | Aashri Restaurant, Nagpur</title>
+  <meta name="description" content="Host memorable family gatherings, ring ceremonies, birthdays, and anniversaries at Aashri Pure Veg Banquet Hall in Nagpur. Featuring crystal chandeliers, polished marble, bespoke pure veg catering, and valet parking.">
+  <link rel="icon" type="image/webp" href="assets/images/aashri_royal_crest.webp">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .banquet-hero {
+      position: relative;
+      min-height: 70vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 9rem 1.5rem 5rem;
+      overflow: hidden;
+    }
+    .banquet-hero-bg {
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+    }
+    .banquet-hero-bg img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: brightness(0.5) contrast(1.1);
+    }
+    .banquet-hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at center, rgba(168, 84, 53, 0.3) 0%, rgba(23, 23, 20, 0.9) 80%);
+      z-index: 2;
+    }
+    .banquet-hero-content {
+      position: relative;
+      z-index: 3;
+      max-width: 860px;
+    }
+    .specs-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.5rem;
+      margin: 4rem 0;
+    }
+    .spec-card {
+      background: var(--color-charcoal-card);
+      border: 1px solid rgba(198, 166, 107, 0.2);
+      border-radius: 4px;
+      padding: 2rem;
+      text-align: center;
+      transition: all var(--transition-fast);
+    }
+    .spec-card:hover {
+      border-color: var(--color-gold);
+      transform: translateY(-4px);
+    }
+    .spec-icon {
+      font-size: 2rem;
+      color: var(--color-gold);
+      margin-bottom: 0.8rem;
+    }
+    .occasions-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+    .occasion-card {
+      background: var(--color-charcoal-card);
+      border: 1px solid rgba(198, 166, 107, 0.15);
+      border-radius: 4px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+    .occasion-img {
+      height: 220px;
+      width: 100%;
+      object-fit: cover;
+    }
+    .occasion-body {
+      padding: 1.8rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Progress Bar -->
+  <div class="scroll-progress-bar"></div>
+
+  <!-- Header -->
+  <header class="header scrolled">
+    <div class="container header-inner">
+      <a href="index.html" class="brand-link" aria-label="Aashri Homepage">
+        <img src="assets/images/aashri_royal_crest.webp" alt="Aashri Crest" class="brand-crest">
+        <div class="brand-text">
+          <span class="brand-title">AASHRI</span>
+          <span class="brand-subtitle">PURE VEG • NAGPUR</span>
+        </div>
+      </a>
+
+      <nav class="nav-desktop">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="index.html#experience" class="nav-link">Our Story</a>
+        <a href="menu.html" class="nav-link">Menu</a>
+        <a href="gallery.html" class="nav-link">Gallery</a>
+        <a href="banquet.html" class="nav-link active">Banquet</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+
+      <div class="header-actions">
+        <a href="#enquire-banquet" class="btn btn-sm btn-primary">Enquire Dates</a>
+        <button class="mobile-toggle" aria-label="Toggle Navigation Drawer">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-backdrop"></div>
+  <aside class="mobile-drawer">
+    <div>
+      <div style="display: flex; align-items: center; gap: 0.8rem; margin-bottom: 2.5rem;">
+        <img src="assets/images/aashri_royal_crest.webp" alt="Crest" style="width: 42px; height: 42px;">
+        <div>
+          <div style="font-family: var(--font-serif-display); font-size: 1.3rem; color: var(--color-gold-light);">AASHRI</div>
+          <div style="font-size: 0.65rem; color: var(--color-ivory-dim);">PURE VEG & BANQUET</div>
+        </div>
+      </div>
+      <div class="mobile-nav-links">
+        <a href="index.html" class="mobile-nav-link">Home</a>
+        <a href="menu.html" class="mobile-nav-link">Menu</a>
+        <a href="gallery.html" class="mobile-nav-link">Gallery</a>
+        <a href="banquet.html" class="mobile-nav-link active">Banquet</a>
+        <a href="contact.html" class="mobile-nav-link">Contact</a>
+      </div>
+    </div>
+    <div>
+      <a href="tel:+918806859456" class="btn btn-outline" style="width: 100%;">Call Banquet Desk: +91 88068 59456</a>
+    </div>
+  </aside>
+
+  <!-- Banquet Hero -->
+  <section class="banquet-hero">
+    <div class="banquet-hero-bg">
+      <img src="assets/images/banquet_crystal_hall.webp" alt="Aashri Banquet Hall Crystal Chandelier Setup">
+      <div class="banquet-hero-overlay"></div>
+    </div>
+
+    <div class="banquet-hero-content">
+      <div class="section-badge centered">The Grand Venue</div>
+      <h1 style="margin-bottom: 1.2rem;">
+        Celebrate Life's Greatest<br><em style="font-family: var(--font-serif-editorial); color: var(--color-gold-light);">Milestones</em>
+      </h1>
+      <p style="font-family: var(--font-serif-editorial); font-size: 1.4rem; color: var(--color-ivory-soft); max-width: 720px; margin: 0 auto 2.5rem;">
+        An air-conditioned hall adorned with sparkling crystal chandeliers, polished marble, and bespoke pure vegetarian hospitality in Nagpur.
+      </p>
+      <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+        <a href="#enquire-banquet" class="btn btn-primary">Enquire For Dates</a>
+        <a href="tel:+918806859456" class="btn btn-secondary">Speak With Banquet Manager</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Venue Specifications -->
+  <section class="container" style="padding: 4rem 1.5rem;">
+    <div class="section-header text-center">
+      <div class="section-badge centered">Venue Capabilities</div>
+      <h2>Engineered for Flawless Events</h2>
+      <p class="section-subtitle">A versatile venue that adapts effortlessly to intimate gatherings and grand celebrations alike.</p>
+    </div>
+
+    <div class="specs-grid">
+      <div class="spec-card">
+        <div class="spec-icon">✨</div>
+        <h4 style="font-size: 1.2rem; color: var(--color-gold-light); margin-bottom: 0.4rem;">Crystal Chandeliers</h4>
+        <p style="font-size: 0.85rem; color: var(--color-ivory-dim); margin-bottom: 0;">Dramatic warm ambient illumination that creates a regal photo atmosphere.</p>
+      </div>
+
+      <div class="spec-card">
+        <div class="spec-icon">❄️</div>
+        <h4 style="font-size: 1.2rem; color: var(--color-gold-light); margin-bottom: 0.4rem;">Central Air Conditioning</h4>
+        <p style="font-size: 0.85rem; color: var(--color-ivory-dim); margin-bottom: 0;">Whisper-quiet climate control keeping guests cool and relaxed throughout.</p>
+      </div>
+
+      <div class="spec-card">
+        <div class="spec-icon">🛗</div>
+        <h4 style="font-size: 1.2rem; color: var(--color-gold-light); margin-bottom: 0.4rem;">Direct Elevator Access</h4>
+        <p style="font-size: 0.85rem; color: var(--color-ivory-dim); margin-bottom: 0;">High-capacity elevator providing effortless access for elderly guests and families.</p>
+      </div>
+
+      <div class="spec-card">
+        <div class="spec-icon">🍲</div>
+        <h4 style="font-size: 1.2rem; color: var(--color-gold-light); margin-bottom: 0.4rem;">Live Pure Veg Buffet</h4>
+        <p style="font-size: 0.85rem; color: var(--color-ivory-dim); margin-bottom: 0;">Live tandoor breads, chaat counters, authentic gravies, and Jain food options.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Celebrations Showcase -->
+  <section style="background: #11110f; padding: 6rem 0;">
+    <div class="container">
+      <div class="section-header text-center">
+        <div class="section-badge centered">Tailored Celebrations</div>
+        <h2>Occasions We Elevate</h2>
+        <p class="section-subtitle">Real celebrations brought to life with thoughtful decor, auspicious traditions, and hospitality.</p>
+      </div>
+
+      <div class="occasions-grid">
+        
+        <!-- Occasion 1 -->
+        <div class="occasion-card">
+          <img src="assets/images/banquet_celebration_decor.webp" alt="Traditional Family Function Decor at Aashri Banquet" class="occasion-img">
+          <div class="occasion-body">
+            <h4 style="font-size: 1.3rem; color: var(--color-gold-light); margin-bottom: 0.5rem;">Family Celebrations & Puja</h4>
+            <p style="font-size: 0.85rem; color: var(--color-ivory-dim); line-height: 1.6;">
+              From traditional brass samai diya lighting and floral marigold rangolis to auspicious puja setups and multi-course family feasts.
+            </p>
+          </div>
+        </div>
+
+        <!-- Occasion 2 -->
+        <div class="occasion-card">
+          <img src="assets/images/culinary_banquet_plated_starters.webp" alt="Plated Appetisers for Ring Ceremony at Aashri" class="occasion-img">
+          <div class="occasion-body">
+            <h4 style="font-size: 1.3rem; color: var(--color-gold-light); margin-bottom: 0.5rem;">Ring Ceremonies & Engagements</h4>
+            <p style="font-size: 0.85rem; color: var(--color-ivory-dim); line-height: 1.6;">
+              Create an unforgettable commencement for life's journey with sophisticated stage decor, pass-around hors d'oeuvres, and bespoke mocktails.
+            </p>
+          </div>
+        </div>
+
+        <!-- Occasion 3 -->
+        <div class="occasion-card">
+          <img src="assets/images/culinary_theatrical_mocktail.webp" alt="Birthday Celebration Theatrical Drinks at Aashri" class="occasion-img">
+          <div class="occasion-body">
+            <h4 style="font-size: 1.3rem; color: var(--color-gold-light); margin-bottom: 0.5rem;">Milestone Birthdays & Anniversaries</h4>
+            <p style="font-size: 0.85rem; color: var(--color-ivory-dim); line-height: 1.6;">
+              Celebrate 25th / 50th anniversaries or birthdays with celebratory cake cutting zones, curated music, and personalized menus.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Banquet Enquiry Form Section -->
+  <section class="container" style="padding: 6rem 1.5rem;" id="enquire-banquet">
+    <div style="max-width: 820px; margin: 0 auto;">
+      <div class="banquet-form-card">
+        <div class="form-header text-center" style="text-align: center;">
+          <div class="section-badge centered">Event Reservation</div>
+          <h3>Enquire About Your Event Date</h3>
+          <p>Provide your preferred date and celebration details. We verify calendar availability and respond promptly.</p>
+        </div>
+
+        <form id="banquetEnquiryForm">
+          <div class="form-grid">
+            <div class="form-group">
+              <label class="form-label" for="banqName">Your Name *</label>
+              <input type="text" id="banqName" name="name" class="form-input" placeholder="e.g. Mrs. Sunita Kulkarni" required>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="banqPhone">WhatsApp / Mobile Number *</label>
+              <input type="tel" id="banqPhone" name="phone" class="form-input" placeholder="e.g. 9822123456" required>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="banqDate">Proposed Event Date *</label>
+              <input type="date" id="banqDate" name="date" class="form-input" required>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="banqOccasion">Celebration Type *</label>
+              <select id="banqOccasion" name="occasion" class="form-select" required>
+                <option value="" disabled selected>Select Occasion</option>
+                <option value="Ring Ceremony / Engagement">Ring Ceremony / Engagement</option>
+                <option value="Wedding Anniversary">Wedding Anniversary</option>
+                <option value="Birthday Party">Birthday Party</option>
+                <option value="Family Function / Get-Together">Family Function / Get-Together</option>
+                <option value="Baby Shower / Dohale Jevan">Baby Shower / Dohale Jevan</option>
+                <option value="Corporate Event / Seminar">Corporate Event / Seminar</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="banqGuests">Expected Guest Count *</label>
+              <select id="banqGuests" name="guests" class="form-select" required>
+                <option value="30 - 60 Guests">30 - 60 Guests</option>
+                <option value="60 - 100 Guests" selected>60 - 100 Guests</option>
+                <option value="100 - 150 Guests">100 - 150 Guests</option>
+                <option value="150+ Guests">150+ Guests</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="banqCatering">Catering Style</label>
+              <select id="banqCatering" name="catering" class="form-select">
+                <option value="North Indian Deluxe Buffet">North Indian Deluxe Buffet</option>
+                <option value="Multi-Cuisine Royal Spread">Multi-Cuisine Royal Spread</option>
+                <option value="Strictly Jain Buffet Available">Strictly Jain Buffet Available</option>
+                <option value="High Tea & Plated Starters">High Tea & Plated Starters</option>
+              </select>
+            </div>
+
+            <div class="form-group full-width">
+              <label class="form-label" for="banqNotes">Specific Preferences or Requirements</label>
+              <textarea id="banqNotes" name="notes" class="form-textarea" placeholder="Tell us about stage decor, flower rangoli, sound requirements, seating format (round table vs theater), or specific timings..."></textarea>
+            </div>
+
+            <div class="form-group full-width" style="margin-top: 0.6rem;">
+              <button type="submit" class="btn btn-primary" style="width: 100%;">
+                Submit Banquet Enquiry →
+              </button>
+            </div>
+          </div>
+
+          <div id="banquetFeedback" class="form-feedback"></div>
+        </form>
+
+        <div style="margin-top: 2rem; text-align: center; border-top: 1px solid rgba(255,255,255,0.06); padding-top: 1.5rem;">
+          <p style="font-size: 0.85rem; color: var(--color-ivory-dim); margin-bottom: 0.5rem;">
+            Direct Banquet Hotline for Urgent Dates:
+          </p>
+          <a href="tel:+918806859456" class="info-phone-link">+91 88068 59456</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container text-center" style="text-align: center;">
+      <p style="font-size: 0.85rem; color: var(--color-ivory-dim);">
+        Aashri Pure Veg Restaurant & Banquet • Mangalmurti Square, Rajendra Nagar, Takli Seem, Nagpur, Maharashtra 440036<br>
+        Direct: <a href="tel:+918806859456" style="color: var(--color-gold);">+91 88068 59456</a>
+      </p>
+      <p style="font-size: 0.75rem; color: var(--color-ivory-dim); margin-top: 1rem;">
+        © 2026 Aashri Pure Veg Restaurant & Banquet. All rights reserved.
+      </p>
+    </div>
+  </footer>
+
+  <script src="js/app.js"></script>
+</body>
+</html>

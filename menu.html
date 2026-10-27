@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Culinary Menu | Aashri Pure Veg Restaurant & Banquet, Nagpur</title>
+  <meta name="description" content="Explore the authentic pure vegetarian menu of Aashri Pure Veg Restaurant & Banquet in Nagpur. Featuring 20+ Paneer specialties, artisanal tandoor starters, rich dals, Indian breads, and theatrical mocktails.">
+  <link rel="icon" type="image/webp" href="assets/images/aashri_royal_crest.webp">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .page-hero {
+      padding: 10rem 0 4rem;
+      background: linear-gradient(180deg, rgba(18, 59, 42, 0.4) 0%, var(--color-charcoal) 100%),
+                  radial-gradient(circle at 50% 0%, rgba(198, 166, 107, 0.15) 0%, transparent 60%);
+      text-align: center;
+      position: relative;
+    }
+    .menu-search-box {
+      max-width: 520px;
+      margin: 2rem auto 0;
+      position: relative;
+    }
+    .menu-search-input {
+      width: 100%;
+      padding: 0.95rem 1.4rem 0.95rem 3rem;
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid var(--color-gold-glow);
+      border-radius: 40px;
+      color: var(--color-ivory);
+      font-size: 0.95rem;
+      backdrop-filter: blur(8px);
+    }
+    .menu-search-input:focus {
+      outline: none;
+      border-color: var(--color-gold);
+      box-shadow: 0 0 15px rgba(198, 166, 107, 0.3);
+    }
+    .search-icon {
+      position: absolute;
+      left: 1.2rem;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--color-gold);
+      font-size: 1.1rem;
+    }
+    .menu-category-section {
+      padding: 3.5rem 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    }
+    .category-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 2rem;
+      border-left: 3px solid var(--color-gold);
+      padding-left: 1rem;
+    }
+    .category-title {
+      font-family: var(--font-serif-display);
+      font-size: 1.8rem;
+      color: var(--color-gold-light);
+    }
+    .menu-item-row {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 1.5rem;
+      padding: 1.2rem 0;
+      border-bottom: 1px dashed rgba(198, 166, 107, 0.18);
+      align-items: start;
+    }
+    .menu-item-row:hover {
+      background: rgba(255, 255, 255, 0.015);
+    }
+    .menu-item-name {
+      font-family: var(--font-serif-display);
+      font-size: 1.2rem;
+      color: var(--color-ivory);
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+    .menu-item-desc {
+      font-size: 0.85rem;
+      color: var(--color-ivory-dim);
+      margin-top: 0.25rem;
+      margin-bottom: 0.3rem;
+      line-height: 1.5;
+    }
+    .menu-item-price {
+      font-family: var(--font-sans);
+      font-size: 1.15rem;
+      font-weight: 600;
+      color: var(--color-gold);
+      text-align: right;
+    }
+    .diet-badge {
+      font-size: 0.68rem;
+      padding: 0.15rem 0.5rem;
+      border-radius: 2px;
+      font-weight: 500;
+      letter-spacing: 0.05em;
+    }
+    .diet-jain {
+      background: rgba(104, 211, 145, 0.15);
+      color: #68d391;
+      border: 1px solid rgba(104, 211, 145, 0.3);
+    }
+    .diet-chef {
+      background: rgba(198, 166, 107, 0.2);
+      color: var(--color-gold-light);
+      border: 1px solid var(--color-gold);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Progress Bar -->
+  <div class="scroll-progress-bar"></div>
+
+  <!-- Header -->
+  <header class="header scrolled">
+    <div class="container header-inner">
+      <a href="index.html" class="brand-link" aria-label="Aashri Homepage">
+        <img src="assets/images/aashri_royal_crest.webp" alt="Aashri Crest" class="brand-crest">
+        <div class="brand-text">
+          <span class="brand-title">AASHRI</span>
+          <span class="brand-subtitle">PURE VEG • NAGPUR</span>
+        </div>
+      </a>
+
+      <nav class="nav-desktop">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="index.html#experience" class="nav-link">Our Story</a>
+        <a href="menu.html" class="nav-link active">Menu</a>
+        <a href="gallery.html" class="nav-link">Gallery</a>
+        <a href="banquet.html" class="nav-link">Banquet</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+
+      <div class="header-actions">
+        <button type="button" class="btn btn-sm btn-primary trigger-reserve-modal">Book Table</button>
+        <button class="mobile-toggle" aria-label="Toggle Navigation Drawer">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-backdrop"></div>
+  <aside class="mobile-drawer">
+    <div>
+      <div style="display: flex; align-items: center; gap: 0.8rem; margin-bottom: 2.5rem;">
+        <img src="assets/images/aashri_royal_crest.webp" alt="Crest" style="width: 42px; height: 42px;">
+        <div>
+          <div style="font-family: var(--font-serif-display); font-size: 1.3rem; color: var(--color-gold-light);">AASHRI</div>
+          <div style="font-size: 0.65rem; color: var(--color-ivory-dim);">PURE VEG & BANQUET</div>
+        </div>
+      </div>
+      <div class="mobile-nav-links">
+        <a href="index.html" class="mobile-nav-link">Home</a>
+        <a href="menu.html" class="mobile-nav-link active">Menu</a>
+        <a href="gallery.html" class="mobile-nav-link">Gallery</a>
+        <a href="banquet.html" class="mobile-nav-link">Banquet</a>
+        <a href="contact.html" class="mobile-nav-link">Contact</a>
+      </div>
+    </div>
+    <div>
+      <a href="tel:+918806859456" class="btn btn-outline" style="width: 100%;">Call: +91 88068 59456</a>
+    </div>
+  </aside>
+
+  <!-- Menu Page Hero -->
+  <section class="page-hero">
+    <div class="container-narrow">
+      <div class="section-badge centered">Culinary Repertoire</div>
+      <h1 style="font-size: clamp(2.5rem, 5vw, 4.2rem); margin-bottom: 1rem;">
+        The Pure Vegetarian <em>Menu</em>
+      </h1>
+      <p style="font-family: var(--font-serif-editorial); font-size: 1.3rem; color: var(--color-ivory-soft);">
+        Crafted daily with wholesome farm-fresh ingredients, cold-pressed oils, and traditional Indian culinary passion.
+      </p>
+
+      <!-- Live Search Box -->
+      <div class="menu-search-box">
+        <span class="search-icon">🔍</span>
+        <input type="text" id="menuLiveSearch" class="menu-search-input" placeholder="Search dishes (e.g. paneer, tikka, dal, naan, mocktail)...">
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Menu Sections -->
+  <main class="container-editorial" style="padding-bottom: 6rem;">
+    
+    <!-- Quick Category Jump Nav -->
+    <div style="display: flex; gap: 0.6rem; overflow-x: auto; padding: 1.5rem 0; border-bottom: 1px solid rgba(198,166,107,0.2); margin-bottom: 2rem;">
+      <a href="#starters-section" class="btn btn-sm btn-outline">Starters</a>
+      <a href="#paneer-section" class="btn btn-sm btn-outline">Paneer Delights</a>
+      <a href="#mains-section" class="btn btn-sm btn-outline">Main Courses</a>
+      <a href="#dals-section" class="btn btn-sm btn-outline">Dals & Rice</a>
+      <a href="#breads-section" class="btn btn-sm btn-outline">Tandoori Breads</a>
+      <a href="#chinese-section" class="btn btn-sm btn-outline">Indo-Chinese</a>
+      <a href="#drinks-section" class="btn btn-sm btn-outline">Theatrical Drinks</a>
+    </div>
+
+    <!-- SECTION 1: GOURMET STARTERS -->
+    <section class="menu-category-section" id="starters-section">
+      <div class="category-header">
+        <div>
+          <h2 class="category-title">Artisanal Starters & Platters</h2>
+          <span style="font-size: 0.85rem; color: var(--color-ivory-dim);">Clay-oven roasted tandoori appetisers and crisp global bites</span>
+        </div>
+      </div>
+
+      <div class="menu-items-container">
+        
+        <div class="menu-item-row" data-dish="tandoori paneer tikka malai curd mint deghi mirch">
+          <div>
+            <div class="menu-item-name">
+              <span>Tandoori Paneer Tikka</span>
+              <span class="diet-badge diet-chef">Chef Signature</span>
+              <span class="diet-badge diet-jain">Jain Available</span>
+            </div>
+            <p class="menu-item-desc">Tender cottage cheese marinated in hung curd, deghi mirch, and roasted carom seeds, skewered with bell peppers and onion, served with mint emulsion.</p>
+          </div>
+          <div class="menu-item-price">₹280</div>
+        </div>
+
+        <div class="menu-item-row" data-dish="crispy cigar spring rolls vegetables avocado">
+          <div>
+            <div class="menu-item-name">
+              <span>Crispy Cigar Spring Rolls</span>
+              <span class="diet-badge diet-chef">Popular</span>
+            </div>
+            <p class="menu-item-desc">Delicate pastry rolls filled with seasoned seasonal vegetables and glass noodles, served with avocado quenelle and sweet chilli reduction.</p>
+          </div>
+          <div class="menu-item-price">₹240</div>
+        </div>
+
+        <div class="menu-item-row" data-dish="cheese sweet corn croquettes balls mozzarella">
+          <div>
+            <div class="menu-item-name">
+              <span>Cheese & Corn Croquettes</span>
+              <span class="diet-badge diet-jain">Jain Available</span>
+            </div>
+            <p class="menu-item-desc">Crisp crumb-coated spheres filled with melting mozzarella cheese and sweet American corn kernels, dusted with roasted herb spices.</p>
+          </div>
+          <div class="menu-item-price">₹250</div>
+        </div>
+
+        <div class="menu-item-row" data-dish="gourmet mediterranean platter falafel hummus lavash pita">
+          <div>
+            <div class="menu-item-name">
+              <span>Gourmet Mediterranean Mezze Platter</span>
+              <span class="diet-badge diet-chef">Sharer</span>
+            </div>
+            <p class="menu-item-desc">Crisp spiced chickpea falafels, warm pita bread, nigella seed lavash crisps, garlic hummus dip, and pickled turnip ribbons.</p>
+          </div>
+          <div class="menu-item-price">₹320</div>
+        </div>
+
+        <div class="menu-item-row" data-dish="hara bhara kebab spinach green pea cottage cheese">
+          <div>
+            <div class="menu-item-name">
+              <span>Hara Bhara Kebab</span>
+              <span class="diet-badge diet-jain">Jain Available</span>
+            </div>
+            <p class="menu-item-desc">Pan-seared patties of fresh spinach, green peas, and crumbled paneer with a center of roasted cashews.</p>
+          </div>
+          <div class="menu-item-price">₹230</div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION 2: PANEER SPECIALITIES (Aashri's Hallmark) -->
+    <section class="menu-category-section" id="paneer-section">
+      <div class="category-header">
+        <div>
+          <h2 class="category-title">Paneer Specialities (20+ Varieties)</h2>
+          <span style="font-size: 0.85rem; color: var(--color-ivory-dim);">Crafted with daily-made fresh soft malai paneer</span>
+        </div>
+      </div>
+
+      <div class="menu-items-container">
+        
+        <div class="menu-item-row" data-dish="shahi paneer cashew gravy royal cream">
+          <div>
+            <div class="menu-item-name">
+              <span>Shahi Paneer</span>
+              <span class="diet-badge diet-chef">House Special</span>
+              <span class="diet-badge diet-jain">Jain Available</span>
+            </div>
+            <p class="menu-item-desc">Soft cottage cheese batons simmered in a rich velvety gravy of roasted cashews, melon seeds, fresh cream, and fragrant green cardamom.</p>
+          </div>
+          <div class="menu-item-price">₹290</div>
+        </div>
+
+        <div class="menu-item-row" data-dish="paneer tikka masala smoked clay oven gravy">
+          <div>
+            <div class="menu-item-name">
+              <span>Paneer Tikka Masala</span>
+              <span class="diet-badge diet-chef">Best Seller</span>
+            </div>
+            <p class="menu-item-desc">Charred tandoori paneer cubes bathed in a robust, spiced tomato-onion reduction finished with butter and kasuri methi.</p>
+          </div>
+          <div class="menu-item-price">₹310</div>
+        </div>
+
+        <div class="menu-item-row" data-dish="paneer lababdar cheese tomato bell pepper">
+          <div>
+            <div class="menu-item-name">
+              <span>Paneer Lababdar</span>
+              <span class="diet-badge diet-jain">Jain Available</span>
+            </div>
+            <p class="menu-item-desc">Lush cottage cheese cubes infused with grated paneer in an unctuous tomato, cashew, and chopped coriander gravy.</p>
+          </div>
+          <div class="menu-item-price">₹295</div>
+        </div>
+
+        <div class="menu-item-row" data-dish="paneer taka tak spicy bell pepper griddle">
+          <div>
+            <div class="menu-item-name">
+              <span>Paneer Taka Tak</span>
+            </div>
+            <p class="menu-item-desc">Spicy, tangy paneer stir-fried on high griddle heat with crushed black pepper, julienned capsicum, and ginger slivers.</p>
+          </div>
+          <div class="menu-item-price">₹285</div>
+        </div>
+
+        <div class="menu-item-row" data-dish="paneer do pyaza caramelized onion two ways">
+          <div>
+            <div class="menu-item-name">
+              <span>Paneer Do Pyaza</span>
+            </div>
+            <p class="menu-item-desc">Double the onion perfection: caramelized onion paste and crisp sautéed shallot petals in a wholesome aromatic curry.</p>
+          </div>
+          <div class="menu-item-price">₹275</div>
+        </div>
+
+        <div class="menu-item-row" data-dish="cashew cottage cheese kaju paneer rich gravy">
+          <div>
+            <div class="menu-item-name">
+              <span>Cashew Cottage Cheese (Kaju Paneer)</span>
+              <span class="diet-badge diet-chef">Signature</span>
+            </div>
+            <p class="menu-item-desc">Whole roasted cashew nuts paired with fresh paneer cubes in a decadent, delicately sweetened golden gravy.</p>
+          </div>
+          <div class="menu-item-price">₹330</div>
+        </div>
+
+        <div class="menu-item-row" data-dish="paneer kolhapuri spicy maratha red chili">
+          <div>
+            <div class="menu-item-name">
+              <span>Paneer Kolhapuri / Maratha</span>
+            </div>
+            <p class="menu-item-desc">Fiery Maharashtrian recipe featuring stone-ground dry coconut, sesame, and sun-dried red chillies.</p>
+          </div>
+          <div class="menu-item-price">₹280</div>
+        </div>
+
+        <div class="menu-item-row" data-dish="palak paneer fresh spinach garlic cream">
+          <div>
+            <div class="menu-item-name">
+              <span>Palak Paneer</span>
+              <span class="diet-badge diet-jain">Jain Available</span>
+            </div>
+            <p class="menu-item-desc">Vibrant blanched spinach puree tempered with burnt garlic, cumin, and soft paneer cubes.</p>
+          </div>
+          <div class="menu-item-price">₹260</div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION 3: INDIAN MAIN COURSE & THALIS -->
+    <section class="menu-category-section" id="mains-section">
+      <div class="category-header">
+        <div>
+          <h2 class="category-title">Vegetable Curries & Royal Thalis</h2>
+          <span style="font-size: 0.85rem; color: var(--color-ivory-dim);">Seasonal handpicked vegetables simmered to slow perfection</span>
+        </div>
+      </div>
+
+      <div class="menu-items-container">
+        
+        <div class="menu-item-row" data-dish="aashri grand veg thali complete feast thali">
+          <div>
+            <div class="menu-item-name">
+              <span>Aashri Signature Veg Thali</span>
+              <span class="diet-badge diet-chef">Complete Feast</span>
+            </div>
+            <p class="menu-item-desc">Comprehensive grand spread: Shahi Paneer, seasonal vegetable dish, Dal Fry, Jeera Rice, 3 Butter Chapatis or 2 Rotis, raita, roasted papad, pickle, salad, and dessert of the day.</p>
+          </div>
+          <div class="menu-item-price">₹340</div>
+        </div>
+
+        <div class="menu-item-row" data-dish="subz handi seasonal vegetables clay pot">
+          <div>
+            <div class="menu-item-name">
+              <span>Subz Handi Masala</span>
+              <span class="diet-badge diet-jain">Jain Available</span>
+            </div>
+            <p class="menu-item-desc">Melange of carrots, green beans, cauliflower, and green peas slow cooked in an earthen pot with home-ground garam masala.</p>
+          </div>
+          <div class="menu-item-price">₹240</div>
+        </div>
+
+        <div class="menu-item-row" data-dish="kaju curry roasted cashews rich gravy">
+          <div>
+            <div class="menu-item-name">
+              <span>Kaju Curry (Cashew Masala)</span>
+            </div>
+            <p class="menu-item-desc">Premium roasted whole cashews simmered in a mildly sweet and rich aromatic onion-tomato-cream gravy.</p>
+          </div>
+          <div class="menu-item-price">₹310</div>
+        </div>
+
+        <div class="menu-item-row" data-dish="veg kolhapuri spicy vegetable curry">
+          <div>
+            <div class="menu-item-name">
+              <span>Veg Kolhapuri</span>
+            </div>
+            <p class="menu-item-desc">Assorted garden vegetables tossed in a spicy, deep red Kolhapuri gravy tempered with whole dry spices.</p>
+          </div>
+          <div class="menu-item-price">₹230</div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION 4: DALS & FRAGRANT RICE -->
+    <section class="menu-category-section" id="dals-section">
+      <div class="category-header">
+        <div>
+          <h2 class="category-title">Comforting Dals & Fragrant Rice</h2>
+          <span style="font-size: 0.85rem; color: var(--color-ivory-dim);">Aged basmati rice and slow-simmered lentils</span>
+        </div>
+      </div>
+
+      <div class="menu-items-container">
+        
+        <div class="menu-item-row" data-dish="dal tadka yellow lentils ghee garlic cumin">
+          <div>
+            <div class="menu-item-name">
+              <span>Dal Tadka</span>
+              <span class="diet-badge diet-chef">Must Try</span>
+            </div>
+            <p class="menu-item-desc">Yellow toor dal slow simmered and finished with a sizzling double tempering of pure desi ghee, cumin, garlic, and Kashmiri red chillies.</p>
+          </div>
+          <div class="menu-item-price">₹190</div>
+        </div>
+
+        <div class="menu-item-row" data-dish="dal fry onion tomato butter">
+          <div>
+            <div class="menu-item-name">
+              <span>Dal Fry</span>
+              <span class="diet-badge diet-jain">Jain Available</span>
+            </div>
+            <p class="menu-item-desc">Homestyle comforting toor dal cooked with fresh tomatoes, green chillies, and cilantro.</p>
+          </div>
+          <div class="menu-item-price">₹175</div>
+        </div>
+
+        <div class="menu-item-row" data-dish="subz dum biryani basmati rice saffron raita">
+          <div>
+            <div class="menu-item-name">
+              <span>Subz Dum Biryani (with Raita)</span>
+              <span class="diet-badge diet-chef">Special</span>
+            </div>
+            <p class="menu-item-desc">Long grain aged basmati layered with marinated garden vegetables, saffron milk, fried onions, and mint, sealed and slow cooked on dum.</p>
+          </div>
+          <div class="menu-item-price">₹260</div>
+        </div>
+
+        <div class="menu-item-row" data-dish="jeera rice basmati cumin desi ghee">
+          <div>
+            <div class="menu-item-name">
+              <span>Jeera Rice</span>
+              <span class="diet-badge diet-jain">Jain Available</span>
+            </div>
+            <p class="menu-item-desc">Fluffy basmati rice tempered with aromatic roasted cumin seeds and fresh coriander.</p>
+          </div>
+          <div class="menu-item-price">₹160</div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION 5: TANDOORI BREADS -->
+    <section class="menu-category-section" id="breads-section">
+      <div class="category-header">
+        <div>
+          <h2 class="category-title">Fresh Clay-Oven Tandoori Breads</h2>
+          <span style="font-size: 0.85rem; color: var(--color-ivory-dim);">Baked live to golden perfection in the clay tandoor</span>
+        </div>
+      </div>
+
+      <div class="menu-items-container">
+        
+        <div class="menu-item-row" data-dish="garlic naan butter minced garlic coriander">
+          <div>
+            <div class="menu-item-name">
+              <span>Butter Garlic Naan</span>
+              <span class="diet-badge diet-chef">Popular</span>
+            </div>
+            <p class="menu-item-desc">Refined flour bread studded with finely chopped roasted garlic and fresh coriander, brushed with butter.</p>
+          </div>
+          <div class="menu-item-price">₹70</div>
+        </div>
+
+        <div class="menu-item-row" data-dish="butter naan soft clay oven">
+          <div>
+            <div class="menu-item-name">
+              <span>Butter Naan</span>
+            </div>
+            <p class="menu-item-desc">Classic pillowy clay oven flatbread brushed generously with churned butter.</p>
+          </div>
+          <div class="menu-item-price">₹55</div>
+        </div>
+
+        <div class="menu-item-row" data-dish="laccha paratha whole wheat layered">
+          <div>
+            <div class="menu-item-name">
+              <span>Laccha Paratha</span>
+            </div>
+            <p class="menu-item-desc">Multi-layered whole wheat bread baked crisp with golden flaky folds.</p>
+          </div>
+          <div class="menu-item-price">₹50</div>
+        </div>
+
+        <div class="menu-item-row" data-dish="tandoori roti whole wheat clay oven">
+          <div>
+            <div class="menu-item-name">
+              <span>Tandoori Butter Roti</span>
+            </div>
+            <p class="menu-item-desc">Traditional whole wheat flatbread baked directly against the tandoor clay walls.</p>
+          </div>
+          <div class="menu-item-price">₹30</div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION 6: INDO-CHINESE & CONTINENTAL -->
+    <section class="menu-category-section" id="chinese-section">
+      <div class="category-header">
+        <div>
+          <h2 class="category-title">Indo-Chinese & Wok Favorites</h2>
+          <span style="font-size: 0.85rem; color: var(--color-ivory-dim);">High-flame wok tossed Asian vegetarian delicacies</span>
+        </div>
+      </div>
+
+      <div class="menu-items-container">
+        
+        <div class="menu-item-row" data-dish="paneer chilli dry gravy bell pepper spring onion">
+          <div>
+            <div class="menu-item-name">
+              <span>Paneer Chilli (Dry / Gravy)</span>
+              <span class="diet-badge diet-chef">Favorite</span>
+            </div>
+            <p class="menu-item-desc">Crispy batter-fried paneer cubes tossed in high-heat wok with diced bell peppers, green chillies, garlic, and dark soy glaze.</p>
+          </div>
+          <div class="menu-item-price">₹250</div>
+        </div>
+
+        <div class="menu-item-row" data-dish="veg hakka noodles wok tossed cabbage carrot">
+          <div>
+            <div class="menu-item-name">
+              <span>Veg Hakka Noodles</span>
+            </div>
+            <p class="menu-item-desc">Thin eggless noodles tossed with crisp cabbage ribbons, julienned carrots, bell peppers, and scallions in light soy seasoning.</p>
+          </div>
+          <div class="menu-item-price">₹210</div>
+        </div>
+
+        <div class="menu-item-row" data-dish="veg manchurian vegetable dumplings gravy">
+          <div>
+            <div class="menu-item-name">
+              <span>Veg Manchurian Gravy</span>
+            </div>
+            <p class="menu-item-desc">Minced vegetable dumplings in a rich, velvety ginger-garlic-coriander dark sauce.</p>
+          </div>
+          <div class="menu-item-price">₹220</div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION 7: THEATRICAL DRINKS & MOCKTAILS -->
+    <section class="menu-category-section" id="drinks-section">
+      <div class="category-header">
+        <div>
+          <h2 class="category-title">Theatrical Beverages & Mocktails</h2>
+          <span style="font-size: 0.85rem; color: var(--color-ivory-dim);">Artistic non-alcoholic concoctions served with visual drama</span>
+        </div>
+      </div>
+
+      <div class="menu-items-container">
+        
+        <div class="menu-item-row" data-dish="aashri mist sunset mocktail dry ice fog citrus cherry">
+          <div>
+            <div class="menu-item-name">
+              <span>Aashri Mist Sunset Mocktail</span>
+              <span class="diet-badge diet-chef">Theatrical Special</span>
+            </div>
+            <p class="menu-item-desc">Signature two-tone cooler of citrus blood-orange and pomegranate reduction, presented over dry-ice aromatic fog in gold-rimmed glassware.</p>
+          </div>
+          <div class="menu-item-price">₹180</div>
+        </div>
+
+        <div class="menu-item-row" data-dish="fresh mint mojito lime soda crushed mint">
+          <div>
+            <div class="menu-item-name">
+              <span>Fresh Garden Mint Mojito</span>
+            </div>
+            <p class="menu-item-desc">Muddled fresh garden mint sprigs, Mexican lime juice, cane sugar syrup, topped with effervescent soda.</p>
+          </div>
+          <div class="menu-item-price">₹140</div>
+        </div>
+
+        <div class="menu-item-row" data-dish="spiced masala chaas roasted cumin buttermilk">
+          <div>
+            <div class="menu-item-name">
+              <span>Spiced Nagpur Masala Chaas</span>
+              <span class="diet-badge diet-jain">Refreshing</span>
+            </div>
+            <p class="menu-item-desc">Traditional churned spiced buttermilk seasoned with roasted cumin powder, black salt, fresh mint, and coriander.</p>
+          </div>
+          <div class="menu-item-price">₹80</div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Bottom Action Box -->
+    <div style="background: var(--color-charcoal-card); border: 1px solid var(--color-gold-glow); border-radius: 4px; padding: 3rem; text-align: center; margin-top: 4rem;">
+      <h3 style="font-size: 2rem; color: var(--color-gold-light); margin-bottom: 0.8rem;">Ready to Taste Togetherness?</h3>
+      <p style="max-width: 600px; margin: 0 auto 2rem; color: var(--color-ivory-dim);">
+        Join us at Mangalmurti Square, Nagpur, or reserve your table in advance for prompt service and personalized attention.
+      </p>
+      <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+        <button type="button" class="btn btn-primary trigger-reserve-modal">Reserve a Table Now</button>
+        <a href="tel:+918806859456" class="btn btn-outline">Call to Order: +91 88068 59456</a>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container text-center" style="text-align: center;">
+      <p style="font-size: 0.85rem; color: var(--color-ivory-dim);">
+        Aashri Pure Veg Restaurant & Banquet • Mangalmurti Square, Rajendra Nagar, Takli Seem, Nagpur, Maharashtra 440036<br>
+        Telephone: <a href="tel:+918806859456" style="color: var(--color-gold);">+91 88068 59456</a>
+      </p>
+      <p style="font-size: 0.75rem; color: var(--color-ivory-dim); margin-top: 1rem;">
+        © 2026 Aashri Pure Veg Restaurant & Banquet. Pure Vegetarian Hospitality.
+      </p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/app.js"></script>
+  <script>
+    // Live Search Filter Script for Menu page
+    const searchInput = document.getElementById('menuLiveSearch');
+    if (searchInput) {
+      searchInput.addEventListener('input', (e) => {
+        const query = e.target.value.toLowerCase().trim();
+        const rows = document.querySelectorAll('.menu-item-row');
+        rows.forEach(row => {
+          const dishData = (row.getAttribute('data-dish') || '') + ' ' + row.textContent.toLowerCase();
+          if (!query || dishData.includes(query)) {
+            row.style.display = 'grid';
+          } else {
+            row.style.display = 'none';
+          }
+        });
+      });
+    }
+  </script>
+</body>
+</html>
