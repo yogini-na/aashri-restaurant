@@ -28,14 +28,13 @@ Inspired by the immersive visual storytelling of [Getty's Persepolis Experience]
 
 ## ✨ Features & Architecture
 
-1. **Cinematic Hero**: Ambient zoom on authentic dining hall photography, staggered typography, and scroll prompt.
-2. **Persepolis Chapter Navigator**: Right-hand interactive chapter bar tracking user journey (`I. Prologue` → `VII. Connect`).
-3. **Web Audio Soundscape**: Real-time synthesized meditative ambient hospitality soundscape.
-4. **Flavours Showcase**: Interactive tabs featuring 20+ Paneer dishes, artisanal starters, and theatrical dry-ice mocktails.
-5. **Editorial Ambience Gallery**: Staggered masonry layout with fullscreen interactive lightbox viewer.
-6. **Banquet Hall & Celebrations**: Crystal chandelier ballroom showcase with live event enquiry form, reference code generator, and WhatsApp synchronization.
-7. **Accessibility**: Wheelchair-accessible infrastructure, direct high-speed elevator access, and on-site valet parking.
-8. **SEO & Structured Data**: Built-in Schema.org `Restaurant` JSON-LD with geo-coordinates.
+1. **Luxury Hero Experience**: Authentic dining hall imagery with high-contrast, refined typography, Google review rating badge, and direct table booking actions.
+2. **Refined Hospitality Design System**: Grounded warm charcoal, silk ivory, imperial champagne gold, and terracotta tones with zero AI-slop novelties.
+3. **Curated Culinary Showcase**: Interactive menu tabs featuring signature tandoori starters, paneer specialties, gravies, and mocktails with authentic Indian veg markers.
+4. **Grand Banquet Ballroom**: Full presentation of crystal chandelier celebration facilities with responsive enquiry form and instant WhatsApp booking integration.
+5. **Editorial Ambience Gallery**: Responsive image gallery with fullscreen interactive lightbox viewer.
+6. **Accessibility & Practical Details**: High-speed elevator, wheelchair-accessible dining, on-site valet parking, hours, and Google Maps navigation.
+7. **SEO & Structured Data**: Built-in Schema.org `Restaurant` JSON-LD with verified geo-coordinates.
 
 ---
 
