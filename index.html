@@ -10,11 +10,11 @@
 
   <!-- Open Graph / Meta -->
   <meta property="og:title" content="Aashri Pure Veg Restaurant & Banquet | Nagpur">
-  <meta property="og:description" content="Where Every Meal Becomes a Celebration. Contemporary pure vegetarian dining & grand banquets at Mangalmurti Square, Nagpur.">
+  <meta property="og:description" content="Contemporary pure vegetarian dining and grand celebration banquets at Mangalmurti Square, Nagpur.">
   <meta property="og:image" content="assets/images/interior_dining_hall.webp">
   <meta property="og:type" content="restaurant">
 
-  <!-- Favicon / Crest -->
+  <!-- Favicon -->
   <link rel="icon" type="image/webp" href="assets/images/aashri_royal_crest.webp">
 
   <!-- Stylesheet -->
@@ -71,46 +71,11 @@
 </head>
 <body>
 
-  <!-- Top Progress Bar -->
-  <div class="scroll-progress-bar" id="progressBar"></div>
-
-  <!-- Persepolis Chapter Navigator (Desktop) -->
-  <nav class="chapter-nav" aria-label="Story Chapters">
-    <div class="chapter-dot active" data-target="prologue">
-      <span class="chapter-label">I. Prologue</span>
-      <div class="chapter-indicator"></div>
-    </div>
-    <div class="chapter-dot" data-target="experience">
-      <span class="chapter-label">II. Togetherness</span>
-      <div class="chapter-indicator"></div>
-    </div>
-    <div class="chapter-dot" data-target="flavours">
-      <span class="chapter-label">III. Flavours</span>
-      <div class="chapter-indicator"></div>
-    </div>
-    <div class="chapter-dot" data-target="ambience">
-      <span class="chapter-label">IV. Inside Aashri</span>
-      <div class="chapter-indicator"></div>
-    </div>
-    <div class="chapter-dot" data-target="banquet">
-      <span class="chapter-label">V. Celebrations</span>
-      <div class="chapter-indicator"></div>
-    </div>
-    <div class="chapter-dot" data-target="atmosphere">
-      <span class="chapter-label">VI. Atmosphere</span>
-      <div class="chapter-indicator"></div>
-    </div>
-    <div class="chapter-dot" data-target="findus">
-      <span class="chapter-label">VII. Connect</span>
-      <div class="chapter-indicator"></div>
-    </div>
-  </nav>
-
-  <!-- Luxury Header -->
+  <!-- Refined Luxury Header -->
   <header class="header">
     <div class="container header-inner">
       <a href="index.html" class="brand-link" aria-label="Aashri Homepage">
-        <img src="assets/images/aashri_royal_crest.webp" alt="Aashri Royal Crest" class="brand-crest">
+        <img src="assets/images/aashri_royal_crest.webp" alt="Aashri Crest" class="brand-crest">
         <div class="brand-text">
           <span class="brand-title">AASHRI</span>
           <span class="brand-subtitle">PURE VEG • NAGPUR</span>
@@ -119,29 +84,24 @@
 
       <!-- Desktop Navigation -->
       <nav class="nav-desktop">
-        <a href="#prologue" class="nav-link active">Home</a>
-        <a href="#experience" class="nav-link">Our Story</a>
+        <a href="#home" class="nav-link active">Home</a>
+        <a href="#story" class="nav-link">Our Story</a>
         <a href="menu.html" class="nav-link">Menu</a>
-        <a href="gallery.html" class="nav-link">Gallery</a>
         <a href="banquet.html" class="nav-link">Banquet</a>
+        <a href="gallery.html" class="nav-link">Gallery</a>
         <a href="contact.html" class="nav-link">Contact</a>
       </nav>
 
       <!-- Actions -->
       <div class="header-actions">
-        <!-- Ambient Sound Toggle -->
-        <button type="button" class="audio-toggle-btn" id="audioToggleBtn" title="Toggle Hospitality Soundscape">
-          <div class="audio-wave">
-            <span class="audio-bar"></span>
-            <span class="audio-bar"></span>
-            <span class="audio-bar"></span>
-          </div>
-          <span class="audio-label">Atmosphere</span>
-        </button>
+        <a href="tel:+918806859456" class="header-phone-link" title="Call for Reservations">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+          <span>+91 88068 59456</span>
+        </a>
 
-        <button type="button" class="btn btn-sm btn-primary trigger-reserve-modal">Book Table</button>
+        <button type="button" class="btn btn-sm btn-primary trigger-reserve-modal">Book a Table</button>
 
-        <!-- Mobile Menu Trigger -->
+        <!-- Mobile Menu Toggle -->
         <button class="mobile-toggle" aria-label="Toggle Navigation Drawer">
           <span></span>
           <span></span>
@@ -156,19 +116,19 @@
   <aside class="mobile-drawer">
     <div>
       <div style="display: flex; align-items: center; gap: 0.8rem; margin-bottom: 2.5rem;">
-        <img src="assets/images/aashri_royal_crest.webp" alt="Crest" style="width: 42px; height: 42px;">
+        <img src="assets/images/aashri_royal_crest.webp" alt="Crest" style="width: 40px; height: 40px;">
         <div>
-          <div style="font-family: var(--font-serif-display); font-size: 1.3rem; letter-spacing: 0.1em; color: var(--color-gold-light);">AASHRI</div>
-          <div style="font-size: 0.65rem; letter-spacing: 0.2em; color: var(--color-ivory-dim);">PURE VEG & BANQUET</div>
+          <div style="font-family: var(--font-display); font-size: 1.25rem; letter-spacing: 0.1em; color: var(--color-gold-light);">AASHRI</div>
+          <div style="font-size: 0.65rem; letter-spacing: 0.2em; color: var(--text-muted);">PURE VEG & BANQUET</div>
         </div>
       </div>
       <div class="mobile-nav-links">
-        <a href="#prologue" class="mobile-nav-link active">Prologue</a>
-        <a href="#experience" class="mobile-nav-link">The Experience</a>
+        <a href="#home" class="mobile-nav-link active">Home</a>
+        <a href="#story" class="mobile-nav-link">Our Story</a>
         <a href="menu.html" class="mobile-nav-link">Culinary Menu</a>
-        <a href="gallery.html" class="mobile-nav-link">Visual Archives</a>
-        <a href="banquet.html" class="mobile-nav-link">The Banquet</a>
-        <a href="contact.html" class="mobile-nav-link">Find & Contact</a>
+        <a href="banquet.html" class="mobile-nav-link">Banquet Hall</a>
+        <a href="gallery.html" class="mobile-nav-link">Photo Gallery</a>
+        <a href="contact.html" class="mobile-nav-link">Contact & Directions</a>
       </div>
     </div>
     <div>
@@ -182,89 +142,109 @@
   </aside>
 
   <!-- ========================================================================
-       CHAPTER I — PROLOGUE (CINEMATIC OPENING HERO)
+       HERO SECTION
        ======================================================================== -->
-  <section class="hero-section" id="prologue" data-chapter="prologue">
+  <section class="hero-section" id="home">
     <div class="hero-background-wrapper">
       <img src="assets/images/interior_dining_hall.webp" alt="Aashri Pure Veg Restaurant Interior Dining Hall" class="hero-bg-image">
-      <div class="hero-overlay-cinematic"></div>
+      <div class="hero-overlay"></div>
     </div>
 
-    <div class="hero-content">
-      <div class="hero-crest-badge">
-        <img src="assets/images/aashri_royal_crest.webp" alt="Royal Crest">
-        <span>Pure Vegetarian Hospitality • Nagpur</span>
+    <div class="container hero-content">
+      <div class="hero-rating-badge">
+        <span class="hero-rating-stars">★★★★★</span>
+        <span class="hero-rating-text"><strong>4.6 Rating</strong> • 500+ Nagpur Diners</span>
       </div>
 
       <h1 class="hero-headline">
-        Where Every Meal<br>Becomes a <em>Celebration</em>
+        Pure Vegetarian Dining &amp;<br>
+        <em>Grand Celebrations</em> in Nagpur
       </h1>
 
       <p class="hero-description">
-        Discover the warmth of pure vegetarian dining and the joy of celebrating together at Aashri. A sanctuary of thoughtful Indian hospitality, multi-cuisine culinary craft, and grand banquet occasions.
+        Experience the warmth of authentic vegetarian cuisine prepared with cold-pressed oils and house-ground spices. Featuring spacious family dining and an elegant air-conditioned banquet hall at Mangalmurti Square.
       </p>
 
       <div class="hero-actions">
-        <a href="#flavours" class="btn btn-primary">Explore Our Menu</a>
-        <a href="#banquet" class="btn btn-secondary">Discover Our Banquet</a>
+        <a href="menu.html" class="btn btn-primary btn-lg">Explore Menu</a>
+        <a href="banquet.html" class="btn btn-secondary btn-lg">Banquet Facilities</a>
+        <button type="button" class="btn btn-outline btn-lg trigger-reserve-modal">Reserve Table</button>
+      </div>
+
+      <!-- Trust Strip -->
+      <div class="hero-trust-strip">
+        <div class="trust-item">
+          <span class="veg-icon"></span>
+          <span>100% Pure Vegetarian Kitchen</span>
+        </div>
+        <div class="trust-item">
+          <span class="trust-item-icon">✦</span>
+          <span>Jain Food Options Available</span>
+        </div>
+        <div class="trust-item">
+          <span class="trust-item-icon">✦</span>
+          <span>Grand AC Banquet (Up to 200 Guests)</span>
+        </div>
+        <div class="trust-item">
+          <span class="trust-item-icon">✦</span>
+          <span>Elevator & Valet Parking</span>
+        </div>
       </div>
     </div>
-
-    <!-- Scroll Indicator Prompt -->
-    <a href="#experience" class="hero-scroll-prompt" aria-label="Scroll to The Aashri Experience">
-      <span>Begin Journey</span>
-      <div class="scroll-indicator-line"></div>
-    </a>
   </section>
 
   <!-- ========================================================================
-       CHAPTER II — THE AASHRI EXPERIENCE ("A TASTE OF TOGETHERNESS")
+       ABOUT & PHILOSOPHY
        ======================================================================== -->
-  <section class="experience-section" id="experience" data-chapter="experience">
+  <section class="section" id="story">
+    <span id="experience" style="position: absolute; top: -100px;"></span>
     <div class="container">
       <div class="experience-grid">
         
-        <!-- Editorial Image Cluster -->
+        <!-- Image Cluster -->
         <div class="experience-gallery-cluster reveal-on-scroll">
-          <div class="cluster-decor-terracotta"></div>
+          <div class="cluster-badge-floating">
+            <span class="cluster-badge-number">100%</span>
+            <span class="cluster-badge-label">Pure Veg<br>Purity Standard</span>
+          </div>
           <img src="assets/images/hospitality_namaste_welcome.webp" alt="Traditional Indian Hospitality Welcome at Aashri Pure Veg" class="cluster-main-img">
           <img src="assets/images/interior_terracotta_arches.webp" alt="Architectural Terracotta Arches at Aashri" class="cluster-sub-img">
         </div>
 
-        <!-- Editorial Text Narrative -->
+        <!-- Story Content -->
         <div class="experience-text-block reveal-on-scroll">
-          <div class="section-badge">The Philosophy</div>
-          <h2>A Taste of<br><em style="font-family: var(--font-serif-editorial); font-style: italic; color: var(--color-gold-light);">Togetherness</em></h2>
+          <div class="section-badge">Our Heritage &amp; Philosophy</div>
+          <h2>Hospitality Grounded in<br><em>Warmth &amp; Tradition</em></h2>
           <p>
-            Rooted in the timeless Indian tradition of <em>Atithi Devo Bhava</em>, Aashri Pure Veg Restaurant & Banquet was conceived as a destination where families gather, milestones are commemorated, and vegetarian cuisine is elevated to an art form.
+            Rooted in the timeless Indian spirit of <em>Atithi Devo Bhava</em>, Aashri was founded to provide Nagpur families with a pristine, celebratory dining environment where pure vegetarian cuisine is prepared with genuine passion.
           </p>
           <p>
-            From the terracotta-hued architectural arches and warm ambient chandeliers to the meticulous hand of our culinary brigade, every detail is crafted to provide Nagpur with an immersive, heartfelt dining experience.
+            From hand-crafted terracotta arches and ambient cove lighting to spacious banquet arrangements, every space is designed to make your family dinners, anniversaries, and festive celebrations unforgettable.
           </p>
 
-          <!-- Pillars Grid -->
+          <!-- 4 Feature Pillars -->
           <div class="pillars-grid">
             <div class="pillar-item">
-              <div class="pillar-title">100% Pure Vegetarian</div>
-              <p class="pillar-desc">Strictly vegetarian kitchen adhering to highest purity, fresh ingredients, and Jain options.</p>
+              <div class="pillar-title">Pure Vegetarian Kitchen</div>
+              <p class="pillar-desc">Strictly vegetarian kitchen with fresh farm ingredients and authentic Jain menu preparation.</p>
             </div>
             <div class="pillar-item">
-              <div class="pillar-title">Multi-Cuisine Craft</div>
-              <p class="pillar-desc">North Indian specialties, tandoori delicacies, Indo-Chinese favorites, and continental platters.</p>
+              <div class="pillar-title">Multi-Cuisine Expertise</div>
+              <p class="pillar-desc">Clay-oven tandoori starters, rich North Indian curries, Indo-Chinese delicacies, and continental platters.</p>
             </div>
             <div class="pillar-item">
-              <div class="pillar-title">Luxury Banquet Floor</div>
-              <p class="pillar-desc">Grand air-conditioned celebration hall with crystal chandeliers for private functions.</p>
+              <div class="pillar-title">Grand Banquet Hall</div>
+              <p class="pillar-desc">Fully air-conditioned luxury ballroom with crystal chandeliers for engagements and birthdays.</p>
             </div>
             <div class="pillar-item">
-              <div class="pillar-title">Inclusive & Accessible</div>
-              <p class="pillar-desc">Elevator-equipped, wheelchair-friendly entrance and seating, with valet parking convenience.</p>
+              <div class="pillar-title">Complete Accessibility</div>
+              <p class="pillar-desc">High-speed passenger elevator, wheelchair-accessible dining seating, and valet assistance.</p>
             </div>
           </div>
 
-          <div style="margin-top: 2.5rem; display: flex; gap: 1rem; align-items: center;">
-            <a href="gallery.html" class="btn btn-outline btn-sm">View Interior Story →</a>
-            <span style="font-size: 0.8rem; color: var(--color-ivory-dim);">Mangalmurti Square, Nagpur</span>
+          <div style="margin-top: 2.2rem; display: flex; gap: 1rem; align-items: center; flex-wrap: wrap;">
+            <a href="gallery.html" class="btn btn-outline btn-sm">Explore Ambience Gallery →</a>
+            <span style="font-size: 0.82rem; color: var(--text-muted);">Mangalmurti Square, Nagpur</span>
           </div>
         </div>
 
@@ -273,91 +253,91 @@
   </section>
 
   <!-- ========================================================================
-       CHAPTER III — A WORLD OF VEGETARIAN FLAVOURS (MENU HIGHLIGHTS)
+       SIGNATURE CULINARY SHOWCASE
        ======================================================================== -->
-  <section class="flavours-section" id="flavours" data-chapter="flavours">
+  <section class="section" id="menu" style="background: var(--bg-surface);">
     <div class="container">
       <div class="section-header text-center reveal-on-scroll">
         <div class="section-badge centered">Curated Flavours</div>
-        <h2>A Symphony of Vegetarian Artistry</h2>
+        <h2>Our Signature Delicacies</h2>
         <p class="section-subtitle">
-          Authentic recipes prepared with cold-pressed oils, farm-fresh produce, and fragrant house-ground spices.
+          Authentic recipes prepared fresh to order with pure ghee, cold-pressed oils, and farm-fresh ingredients.
         </p>
       </div>
 
-      <!-- Category Filter Tabs -->
+      <!-- Filter Tabs -->
       <div class="menu-tabs-wrapper reveal-on-scroll">
-        <button class="menu-tab-btn active" data-category="all">Signature Selection</button>
-        <button class="menu-tab-btn" data-category="starters">Starters & Platters</button>
+        <button class="menu-tab-btn active" data-category="all">All Highlights</button>
+        <button class="menu-tab-btn" data-category="starters">Starters &amp; Platters</button>
         <button class="menu-tab-btn" data-category="paneer">Paneer Specialities</button>
-        <button class="menu-tab-btn" data-category="maincourse">Main Course & Breads</button>
-        <button class="menu-tab-btn" data-category="beverages">Theatrical Drinks</button>
+        <button class="menu-tab-btn" data-category="maincourse">Main Course &amp; Breads</button>
+        <button class="menu-tab-btn" data-category="beverages">Signature Drinks</button>
       </div>
 
-      <!-- Menu Grid with Authentic Food Photography -->
+      <!-- Dishes Grid -->
       <div class="menu-grid">
         
-        <!-- Dish 1: Authentic Plated Paneer Tikka -->
+        <!-- Dish 1: Paneer Tikka -->
         <div class="menu-card reveal-on-scroll" data-category="paneer">
           <div class="menu-card-img-wrap">
-            <img src="assets/images/culinary_paneer_tikka.webp" alt="Charred Tandoori Paneer Tikka with Mint Coulis at Aashri" class="menu-card-img" loading="lazy">
+            <img src="assets/images/culinary_paneer_tikka.webp" alt="Charred Tandoori Paneer Tikka at Aashri" class="menu-card-img" loading="lazy">
             <span class="menu-card-badge">Chef's Signature</span>
           </div>
           <div class="menu-card-body">
             <div class="menu-card-header">
               <h3 class="menu-card-title">Tandoori Paneer Tikka</h3>
-              <span class="menu-card-price">Specialty</span>
+              <span class="menu-card-price">₹280</span>
             </div>
             <p class="menu-card-desc">
-              Succulent malai paneer cubes marinated in hand-ground Rajasthani deghi mirch and mustard oil, clay-oven roasted, served over brushed mint coulis with pickled spiral shallots.
+              Succulent malai paneer marinated in hand-ground spices and mustard oil, roasted to perfection in our clay tandoor, served with fresh mint chutney.
             </p>
             <div class="menu-card-tags">
-              <span class="tag-pureveg">Pure Veg</span>
-              <span class="tag-pill">Tandoor Clay Oven</span>
+              <span class="tag-pureveg"><span class="veg-icon"></span> Pure Veg</span>
+              <span class="tag-pill">Tandoor Specialty</span>
               <span class="tag-pill">Jain Option</span>
             </div>
           </div>
         </div>
 
-        <!-- Dish 2: Crispy Cigar Rolls with Avocado Dip -->
+        <!-- Dish 2: Crispy Spring Rolls -->
         <div class="menu-card reveal-on-scroll" data-category="starters">
           <div class="menu-card-img-wrap">
-            <img src="assets/images/culinary_crisp_cigar_rolls.webp" alt="Crispy Vegetable Cigar Rolls on Banana Leaf at Aashri" class="menu-card-img" loading="lazy">
-            <span class="menu-card-badge">Gourmet Starter</span>
+            <img src="assets/images/culinary_crisp_cigar_rolls.webp" alt="Crispy Vegetable Cigar Rolls at Aashri" class="menu-card-img" loading="lazy">
+            <span class="menu-card-badge">Popular Starter</span>
           </div>
           <div class="menu-card-body">
             <div class="menu-card-header">
-              <h3 class="menu-card-title">Crispy Cigar Spring Rolls</h3>
-              <span class="menu-card-price">Popular</span>
+              <h3 class="menu-card-title">Crispy Cigar Rolls</h3>
+              <span class="menu-card-price">₹220</span>
             </div>
             <p class="menu-card-desc">
-              Golden-fried crisp rolls stuffed with julienned wok-tossed farm vegetables and mild spices, presented on fresh banana leaf with avocado-coriander quenelle and micro-salad.
+              Golden-fried crisp rolls stuffed with julienned wok-tossed farm vegetables and mild oriental herbs, served with sweet chilli dip.
             </p>
             <div class="menu-card-tags">
-              <span class="tag-pureveg">Pure Veg</span>
+              <span class="tag-pureveg"><span class="veg-icon"></span> Pure Veg</span>
               <span class="tag-pill">Crispy</span>
               <span class="tag-pill">Indo-Asian</span>
             </div>
           </div>
         </div>
 
-        <!-- Dish 3: Theatrical Sunset Fog Mocktail -->
+        <!-- Dish 3: Signature Mocktail -->
         <div class="menu-card reveal-on-scroll" data-category="beverages">
           <div class="menu-card-img-wrap">
-            <img src="assets/images/culinary_theatrical_mocktail.webp" alt="Theatrical Dry-Ice Fog Mocktail at Aashri Restaurant" class="menu-card-img" loading="lazy">
-            <span class="menu-card-badge">Theatrical Experience</span>
+            <img src="assets/images/culinary_theatrical_mocktail.webp" alt="Theatrical Mocktail at Aashri" class="menu-card-img" loading="lazy">
+            <span class="menu-card-badge">Table Presentation</span>
           </div>
           <div class="menu-card-body">
             <div class="menu-card-header">
-              <h3 class="menu-card-title">Aashri Mist Sunset Mocktail</h3>
-              <span class="menu-card-price">Signature Drink</span>
+              <h3 class="menu-card-title">Aashri Sunset Cooler</h3>
+              <span class="menu-card-price">₹180</span>
             </div>
             <p class="menu-card-desc">
-              Layered citrus blood-orange and wild berry cooler infused with crushed mint sprigs and maraschino cherry, served dramatic over dry-ice aromatic fog in gold-rimmed glassware.
+              Layered citrus blood-orange and wild berry cooler infused with crushed mint sprigs and maraschino cherry, served dramatically chilled.
             </p>
             <div class="menu-card-tags">
-              <span class="tag-pureveg">Non-Alcoholic</span>
-              <span class="tag-pill">Table Presentation</span>
+              <span class="tag-pureveg"><span class="veg-icon"></span> Non-Alcoholic</span>
+              <span class="tag-pill">Refreshing</span>
               <span class="tag-pill">Chilled</span>
             </div>
           </div>
@@ -366,74 +346,74 @@
         <!-- Dish 4: Falafel Mezze Platter -->
         <div class="menu-card reveal-on-scroll" data-category="starters">
           <div class="menu-card-img-wrap">
-            <img src="assets/images/culinary_mediterranean_platter.webp" alt="Falafel Mezze Platter with Hummus and Lavash at Aashri" class="menu-card-img" loading="lazy">
-            <span class="menu-card-badge">Fusion Platter</span>
+            <img src="assets/images/culinary_mediterranean_platter.webp" alt="Falafel Mezze Platter with Hummus at Aashri" class="menu-card-img" loading="lazy">
+            <span class="menu-card-badge">Sharing Platter</span>
           </div>
           <div class="menu-card-body">
             <div class="menu-card-header">
-              <h3 class="menu-card-title">Gourmet Mediterranean Platter</h3>
-              <span class="menu-card-price">Sharer</span>
+              <h3 class="menu-card-title">Gourmet Mezze Platter</h3>
+              <span class="menu-card-price">₹320</span>
             </div>
             <p class="menu-card-desc">
-              Crisp chickpea falafel pockets nestled in pillowy pita wedges, accompanied by creamy tahini hummus, artisanal nigella seed lavash, and pickled turnip ribbons.
+              Crisp chickpea falafel pockets accompanied by creamy tahini hummus, soft pita bread wedges, artisanal lavash, and pickled turnip ribbons.
             </p>
             <div class="menu-card-tags">
-              <span class="tag-pureveg">Pure Veg</span>
-              <span class="tag-pill">Sharing Board</span>
+              <span class="tag-pureveg"><span class="veg-icon"></span> Pure Veg</span>
+              <span class="tag-pill">Family Sharer</span>
               <span class="tag-pill">Continental</span>
             </div>
           </div>
         </div>
 
-        <!-- Dish 5: Golden Cheese & Corn Croquettes -->
+        <!-- Dish 5: Cheese Corn Croquettes -->
         <div class="menu-card reveal-on-scroll" data-category="starters">
           <div class="menu-card-img-wrap">
-            <img src="assets/images/culinary_cheese_corn_balls.webp" alt="Golden Cheese Corn Balls with Spiced Emulsion at Aashri" class="menu-card-img" loading="lazy">
+            <img src="assets/images/culinary_cheese_corn_balls.webp" alt="Golden Cheese Corn Balls at Aashri" class="menu-card-img" loading="lazy">
             <span class="menu-card-badge">Family Favorite</span>
           </div>
           <div class="menu-card-body">
             <div class="menu-card-header">
-              <h3 class="menu-card-title">Cheese & Sweet Corn Croquettes</h3>
-              <span class="menu-card-price">Starter</span>
+              <h3 class="menu-card-title">Cheese &amp; Corn Croquettes</h3>
+              <span class="menu-card-price">₹240</span>
             </div>
             <p class="menu-card-desc">
-              Melt-in-mouth golden spheres of mozzarella and tender sweet corn, garnished with edible purple petals and parmesan dust, served with tangy bell pepper dip.
+              Melt-in-mouth golden spheres of mozzarella cheese and sweet corn kernels seasoned with herbs, served with spicy garlic mayo.
             </p>
             <div class="menu-card-tags">
-              <span class="tag-pureveg">Pure Veg</span>
+              <span class="tag-pureveg"><span class="veg-icon"></span> Pure Veg</span>
               <span class="tag-pill">Kids Favorite</span>
               <span class="tag-pill">Cheesy</span>
             </div>
           </div>
         </div>
 
-        <!-- Dish 6: Banquet Plated Delicacies & Main Courses -->
+        <!-- Dish 6: Shahi Paneer & Handi Gravies -->
         <div class="menu-card reveal-on-scroll" data-category="maincourse">
           <div class="menu-card-img-wrap">
-            <img src="assets/images/culinary_banquet_plated_starters.webp" alt="Plated Banquet Delicacies at Aashri Restaurant Nagpur" class="menu-card-img" loading="lazy">
-            <span class="menu-card-badge">Banquet Masterpiece</span>
+            <img src="assets/images/culinary_banquet_plated_starters.webp" alt="Plated Curries at Aashri Nagpur" class="menu-card-img" loading="lazy">
+            <span class="menu-card-badge">Curry Specialty</span>
           </div>
           <div class="menu-card-body">
             <div class="menu-card-header">
-              <h3 class="menu-card-title">Shahi Paneer & Handi Gravies</h3>
-              <span class="menu-card-price">Main Course</span>
+              <h3 class="menu-card-title">Paneer Butter Masala</h3>
+              <span class="menu-card-price">₹290</span>
             </div>
             <p class="menu-card-desc">
-              Silken cottage cheese cooked in creamy cashew-melon seed velouté scented with cardamom, paired with clay-oven baked garlic naan, dal tadka, and fragrant basmati jeera rice.
+              Rich cottage cheese cubes simmered in a velvety tomato and cashew nut gravy scented with dried fenugreek, best paired with butter naan.
             </p>
             <div class="menu-card-tags">
-              <span class="tag-pureveg">Pure Veg</span>
+              <span class="tag-pureveg"><span class="veg-icon"></span> Pure Veg</span>
               <span class="tag-pill">Rich Gravy</span>
-              <span class="tag-pill">Clay Oven Naan</span>
+              <span class="tag-pill">Jain Option</span>
             </div>
           </div>
         </div>
 
       </div>
 
-      <!-- View Full Menu CTA -->
-      <div style="text-align: center; margin-top: 4rem;" class="reveal-on-scroll">
-        <a href="menu.html" class="btn btn-primary" style="padding: 1rem 2.5rem;">
+      <!-- Menu CTA -->
+      <div style="text-align: center; margin-top: 3.5rem;" class="reveal-on-scroll">
+        <a href="menu.html" class="btn btn-primary btn-lg">
           View Complete Digital Menu (100+ Dishes) →
         </a>
       </div>
@@ -441,154 +421,63 @@
   </section>
 
   <!-- ========================================================================
-       CHAPTER IV — INSIDE AASHRI (CINEMATIC AMBIENCE GALLERY)
+       GRAND BANQUET HALL & CELEBRATIONS
        ======================================================================== -->
-  <section class="ambience-section" id="ambience" data-chapter="ambience">
-    <div class="container">
-      <div class="section-header text-center reveal-on-scroll">
-        <div class="section-badge centered">The Ambience</div>
-        <h2>Inside Aashri</h2>
-        <p class="section-subtitle">
-          An architectural tapestry of terracotta arches, gold accents, and serene natural foliage.
-        </p>
-      </div>
-
-      <!-- Editorial Staggered Layout (Persepolis Inspired) -->
-      <div class="editorial-gallery-grid">
-        
-        <!-- Item 1: Main Dining Hall (Wide Span) -->
-        <div class="gallery-item gallery-span-8 reveal-on-scroll">
-          <img src="assets/images/interior_dining_hall.webp" alt="Aashri Grand Dining Hall Interior with Leather Seating" loading="lazy">
-          <div class="gallery-caption-overlay">
-            <span class="gallery-caption-tag">Main Dining Sanctuary</span>
-            <h4 class="gallery-caption-title">The Grand Dining Hall with Modern Arches & Plush Banquettes</h4>
-          </div>
-        </div>
-
-        <!-- Item 2: Terracotta Arched Wall (Span 4) -->
-        <div class="gallery-item gallery-span-4 reveal-on-scroll">
-          <img src="assets/images/interior_terracotta_arches.webp" alt="Terracotta Arch Display Wall at Aashri Restaurant" loading="lazy">
-          <div class="gallery-caption-overlay">
-            <span class="gallery-caption-tag">Architectural Accent</span>
-            <h4 class="gallery-caption-title">Hand-finished Terracotta Niche Wall with Ceramic Art</h4>
-          </div>
-        </div>
-
-        <!-- Item 3: Banquet Crystal Hall (Span 6) -->
-        <div class="gallery-item gallery-span-6 reveal-on-scroll">
-          <img src="assets/images/banquet_crystal_hall.webp" alt="Aashri Banquet Hall with Crystal Chandeliers" loading="lazy">
-          <div class="gallery-caption-overlay">
-            <span class="gallery-caption-tag">Banquet Venue</span>
-            <h4 class="gallery-caption-title">Grand Ballroom Adorned with Imperial Crystal Chandeliers</h4>
-          </div>
-        </div>
-
-        <!-- Item 4: Night Facade (Span 6) -->
-        <div class="gallery-item gallery-span-6 reveal-on-scroll">
-          <img src="assets/images/exterior_facade_night.webp" alt="Aashri Restaurant Building at Night with Fairy Lights" loading="lazy">
-          <div class="gallery-caption-overlay">
-            <span class="gallery-caption-tag">Exterior Landmark</span>
-            <h4 class="gallery-caption-title">Illuminated Glass Facade at Mangalmurti Square</h4>
-          </div>
-        </div>
-
-        <!-- Item 5: Grand Entrance Stairs (Span 4) -->
-        <div class="gallery-item gallery-span-4-mid reveal-on-scroll">
-          <img src="assets/images/grand_entrance_stairs.webp" alt="Marble Entrance Staircase with Backlit Risers at Aashri" loading="lazy">
-          <div class="gallery-caption-overlay">
-            <span class="gallery-caption-tag">The Threshold</span>
-            <h4 class="gallery-caption-title">Backlit Marble Staircase & Glass Reception Lobby</h4>
-          </div>
-        </div>
-
-        <!-- Item 6: Ambient Dining Booth (Span 4) -->
-        <div class="gallery-item gallery-span-4-mid2 reveal-on-scroll">
-          <img src="assets/images/interior_ambient_booth.webp" alt="Warm Cove Lighting in Dining Area at Aashri" loading="lazy">
-          <div class="gallery-caption-overlay">
-            <span class="gallery-caption-tag">Intimate Dining</span>
-            <h4 class="gallery-caption-title">Warm Cove Lit Booths for Family Gatherings</h4>
-          </div>
-        </div>
-
-        <!-- Item 7: Chef Table Service (Span 4) -->
-        <div class="gallery-item gallery-span-4-mid3 reveal-on-scroll">
-          <img src="assets/images/service_chef_table_service.webp" alt="Chef Table Service at Aashri Restaurant" loading="lazy">
-          <div class="gallery-caption-overlay">
-            <span class="gallery-caption-tag">Hospitality Craft</span>
-            <h4 class="gallery-caption-title">Tableside Chef Presentation in Earthenware</h4>
-          </div>
-        </div>
-
-      </div>
-
-      <div style="text-align: center; margin-top: 3.5rem;">
-        <a href="gallery.html" class="btn btn-outline">Explore Complete Visual Archives (25+ Photos) →</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ========================================================================
-       CHAPTER V — CELEBRATIONS AT AASHRI BANQUET
-       ======================================================================== -->
-  <section class="banquet-section" id="banquet" data-chapter="banquet">
+  <section class="section banquet-section" id="banquet">
     <div class="container">
       <div class="section-header reveal-on-scroll">
-        <div class="section-badge">Private Celebrations & Events</div>
-        <h2>Make Every Occasion<br><em style="font-family: var(--font-serif-editorial); color: var(--color-gold-light);">Memorable</em></h2>
+        <div class="section-badge">Celebrations &amp; Private Events</div>
+        <h2>Nagpur's Premier Pure Veg<br><em>Banquet Destination</em></h2>
         <p class="section-subtitle">
-          Nagpur's premier pure vegetarian banquet venue for ring ceremonies, wedding anniversaries, birthdays, and family milestones.
+          Celebrate ring ceremonies, wedding anniversaries, birthdays, and family milestones in our air-conditioned ballroom with tailored catering.
         </p>
       </div>
 
       <div class="banquet-content-wrapper">
         
-        <!-- Showcase Column with Real Banquet Images -->
+        <!-- Showcase Column -->
         <div class="banquet-showcase-column reveal-on-scroll">
           <div class="banquet-hero-card">
             <img src="assets/images/banquet_crystal_hall.webp" alt="Aashri Banquet Hall Crystal Chandelier Setup">
             <div class="banquet-hero-badge">
-              <h4>The Grand Celebration Hall</h4>
-              <p>Fully Air-Conditioned • Polished Marble • Crystal Chandeliers • Flexible Configurations</p>
+              <h4>The Grand Crystal Ballroom</h4>
+              <p>Fully Air-Conditioned • Polished Marble • Crystal Chandeliers • 50 to 200 Guests</p>
             </div>
           </div>
 
           <div class="banquet-hero-card">
-            <img src="assets/images/banquet_celebration_decor.webp" alt="Authentic Celebration Decor with Diya and Flowers at Aashri">
+            <img src="assets/images/banquet_celebration_decor.webp" alt="Celebration Decor with Diya and Flowers at Aashri">
             <div class="banquet-hero-badge">
-              <h4>Bespoke Traditional & Modern Decor</h4>
-              <p>Brass Samai Diyas • Fresh Marigold & Rose Displays • Custom Balloon & Floral Arches</p>
+              <h4>Bespoke Event &amp; Stage Decor</h4>
+              <p>Floral Stage Setups • Brass Samai Diyas • Balloon Themes • Ambient Photography Lighting</p>
             </div>
           </div>
 
           <div class="banquet-features-grid">
             <div class="banquet-feature-box">
-              <div class="feature-icon-gold">❖</div>
-              <h5>Curated Pure Veg Catering</h5>
-              <p>Exclusive pure vegetarian live food counters, North Indian, Jain menu options, and desserts.</p>
+              <h5>✦ Pure Veg Catering</h5>
+              <p>Live food counters, North Indian feast, chaat stations, Jain buffet, and desserts.</p>
             </div>
             <div class="banquet-feature-box">
-              <div class="feature-icon-gold">❖</div>
-              <h5>Audio & Event Ambience</h5>
-              <p>Integrated sound system, ambient lighting controls, and dedicated photography backdrop zones.</p>
+              <h5>✦ Sound &amp; Lighting</h5>
+              <p>Integrated audio system, customizable ambient cove lighting, and dedicated stage area.</p>
             </div>
             <div class="banquet-feature-box">
-              <div class="feature-icon-gold">❖</div>
-              <h5>Elevator & Parking</h5>
-              <p>High-speed passenger elevator direct to banquet floor and valet assistance for your guests.</p>
+              <h5>✦ Elevator &amp; Parking</h5>
+              <p>Direct passenger elevator to the banquet floor and valet assistance for your guests.</p>
             </div>
             <div class="banquet-feature-box">
-              <div class="feature-icon-gold">❖</div>
-              <h5>Dedicated Event Manager</h5>
-              <p>Personal coordinator ensuring seamless timeline, dining service, and personalized care.</p>
+              <h5>✦ Event Coordinator</h5>
+              <p>Dedicated banquet manager ensuring timely service, seating arrangements, and hospitality.</p>
             </div>
           </div>
         </div>
 
-        <!-- Banquet Interactive Enquiry Form -->
+        <!-- Banquet Enquiry Form -->
         <div class="banquet-form-card reveal-on-scroll">
           <div class="form-header">
             <h3>Enquire About Your Event</h3>
-            <p>Tell us about your celebration and our banquet team will curate a personalized quote.</p>
+            <p>Share your event details and our banquet manager will prepare an instant customized quote.</p>
           </div>
 
           <form id="banquetEnquiryForm">
@@ -618,18 +507,17 @@
                   <option value="Wedding Anniversary">Wedding Anniversary</option>
                   <option value="Family Get-Together">Family Get-Together</option>
                   <option value="Baby Shower / Dohale Jevan">Baby Shower / Dohale Jevan</option>
-                  <option value="Corporate Meeting & Dinner">Corporate Meeting & Dinner</option>
-                  <option value="Festive Party">Festive Gathering</option>
+                  <option value="Corporate Meeting & Dinner">Corporate Dinner & Meeting</option>
                 </select>
               </div>
 
               <div class="form-group">
-                <label class="form-label" for="banqGuests">Expected Guest Count *</label>
+                <label class="form-label" for="banqGuests">Expected Guests *</label>
                 <select id="banqGuests" name="guests" class="form-select" required>
-                  <option value="25 - 50 Guests">Intimate Gathering (25 - 50 Guests)</option>
-                  <option value="50 - 100 Guests" selected>Medium Gathering (50 - 100 Guests)</option>
-                  <option value="100 - 150 Guests">Large Celebration (100 - 150 Guests)</option>
-                  <option value="150+ Guests">Grand Function (150+ Guests)</option>
+                  <option value="25 - 50 Guests">Intimate (25 - 50 Guests)</option>
+                  <option value="50 - 100 Guests" selected>Medium (50 - 100 Guests)</option>
+                  <option value="100 - 150 Guests">Large (100 - 150 Guests)</option>
+                  <option value="150 - 200+ Guests">Grand (150 - 200+ Guests)</option>
                 </select>
               </div>
 
@@ -644,24 +532,24 @@
               </div>
 
               <div class="form-group full-width">
-                <label class="form-label" for="banqNotes">Additional Requirements & Notes</label>
-                <textarea id="banqNotes" name="notes" class="form-textarea" placeholder="Tell us if you need stage decoration, floral setups, sound system, special dietary arrangements, or specific timings..."></textarea>
+                <label class="form-label" for="banqNotes">Additional Requirements &amp; Timings</label>
+                <textarea id="banqNotes" name="notes" class="form-textarea" placeholder="Tell us if you require stage floral decor, music system, projector, specific session timings..."></textarea>
               </div>
 
               <div class="form-group full-width" style="margin-top: 0.5rem;">
                 <button type="submit" class="btn btn-primary" style="width: 100%;">
-                  Submit Banquet Enquiry →
+                  Request Banquet Availability &amp; Quote →
                 </button>
               </div>
 
             </div>
 
-            <!-- Instant Feedback Notification Box -->
+            <!-- Instant Feedback Box -->
             <div id="banquetFeedback" class="form-feedback"></div>
           </form>
 
           <div style="margin-top: 1.5rem; text-align: center; border-top: 1px solid rgba(255,255,255,0.06); padding-top: 1.25rem;">
-            <span style="font-size: 0.8rem; color: var(--color-ivory-dim);">Prefer immediate assistance? Call our banquet manager:</span>
+            <span style="font-size: 0.8rem; color: var(--text-muted);">Prefer immediate consultation? Call our manager:</span>
             <div style="margin-top: 0.4rem;">
               <a href="tel:+918806859456" class="info-phone-link">+91 88068 59456</a>
             </div>
@@ -673,33 +561,119 @@
   </section>
 
   <!-- ========================================================================
-       CHAPTER VI — OUR ATMOSPHERE (CINEMATIC FULL-WIDTH STATEMENT)
+       AMBIENCE & PHOTO GALLERY
        ======================================================================== -->
-  <section class="atmosphere-section" id="atmosphere" data-chapter="atmosphere">
+  <section class="section" id="gallery">
+    <div class="container">
+      <div class="section-header text-center reveal-on-scroll">
+        <div class="section-badge centered">Restaurant Ambience</div>
+        <h2>Inside Aashri</h2>
+        <p class="section-subtitle">
+          A glimpse into our terracotta arch dining hall, illuminated evening building, and celebration spaces.
+        </p>
+      </div>
+
+      <div class="editorial-gallery-grid">
+        
+        <!-- Photo 1 -->
+        <div class="gallery-item gallery-span-8 reveal-on-scroll">
+          <img src="assets/images/interior_dining_hall.webp" alt="Aashri Grand Dining Hall Interior" loading="lazy">
+          <div class="gallery-caption-overlay">
+            <span class="gallery-caption-tag">Dining Hall</span>
+            <h4 class="gallery-caption-title">Grand Dining Sanctuary with Architectural Arches &amp; Plush Booths</h4>
+          </div>
+        </div>
+
+        <!-- Photo 2 -->
+        <div class="gallery-item gallery-span-4 reveal-on-scroll">
+          <img src="assets/images/interior_terracotta_arches.webp" alt="Terracotta Arch Display Wall at Aashri" loading="lazy">
+          <div class="gallery-caption-overlay">
+            <span class="gallery-caption-tag">Design Details</span>
+            <h4 class="gallery-caption-title">Hand-Finished Terracotta Niche Wall</h4>
+          </div>
+        </div>
+
+        <!-- Photo 3 -->
+        <div class="gallery-item gallery-span-6 reveal-on-scroll">
+          <img src="assets/images/banquet_crystal_hall.webp" alt="Aashri Banquet Hall with Crystal Chandeliers" loading="lazy">
+          <div class="gallery-caption-overlay">
+            <span class="gallery-caption-tag">Celebrations</span>
+            <h4 class="gallery-caption-title">Grand Ballroom Adorned with Crystal Chandeliers</h4>
+          </div>
+        </div>
+
+        <!-- Photo 4 -->
+        <div class="gallery-item gallery-span-6 reveal-on-scroll">
+          <img src="assets/images/exterior_facade_night.webp" alt="Aashri Restaurant Building at Night" loading="lazy">
+          <div class="gallery-caption-overlay">
+            <span class="gallery-caption-tag">Landmark</span>
+            <h4 class="gallery-caption-title">Illuminated Glass Facade at Mangalmurti Square</h4>
+          </div>
+        </div>
+
+        <!-- Photo 5 -->
+        <div class="gallery-item gallery-span-4-mid reveal-on-scroll">
+          <img src="assets/images/grand_entrance_stairs.webp" alt="Marble Entrance Staircase at Aashri" loading="lazy">
+          <div class="gallery-caption-overlay">
+            <span class="gallery-caption-tag">Welcome</span>
+            <h4 class="gallery-caption-title">Backlit Marble Entrance &amp; Elevator Lobby</h4>
+          </div>
+        </div>
+
+        <!-- Photo 6 -->
+        <div class="gallery-item gallery-span-4-mid2 reveal-on-scroll">
+          <img src="assets/images/interior_ambient_booth.webp" alt="Warm Cove Lighting in Dining Area" loading="lazy">
+          <div class="gallery-caption-overlay">
+            <span class="gallery-caption-tag">Family Booths</span>
+            <h4 class="gallery-caption-title">Comfortable Cove-Lit Seating for Families</h4>
+          </div>
+        </div>
+
+        <!-- Photo 7 -->
+        <div class="gallery-item gallery-span-4-mid3 reveal-on-scroll">
+          <img src="assets/images/service_chef_table_service.webp" alt="Chef Table Service at Aashri" loading="lazy">
+          <div class="gallery-caption-overlay">
+            <span class="gallery-caption-tag">Hospitality</span>
+            <h4 class="gallery-caption-title">Attentive Tableside Service &amp; Earthenware Craft</h4>
+          </div>
+        </div>
+
+      </div>
+
+      <div style="text-align: center; margin-top: 3.5rem;">
+        <a href="gallery.html" class="btn btn-outline">Explore Complete Photo Gallery (25+ Photos) →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       ATMOSPHERE QUOTE STRIP
+       ======================================================================== -->
+  <section class="atmosphere-section">
     <div class="atmosphere-bg-wrapper">
-      <img src="assets/images/exterior_building_evening.webp" alt="Aashri Restaurant Building Ambient Evening Glow" class="atmosphere-bg-img" loading="lazy">
+      <img src="assets/images/exterior_building_evening.webp" alt="Aashri Restaurant Evening Glow" class="atmosphere-bg-img" loading="lazy">
       <div class="atmosphere-overlay"></div>
     </div>
 
     <div class="atmosphere-content reveal-on-scroll">
       <div class="quote-mark">“</div>
       <blockquote class="atmosphere-statement">
-        A sanctuary where timeless vegetarian recipes, architectural grace, and genuine heartfelt hospitality unite to create lasting memories.
+        Where culinary purity, warm architectural elegance, and heartfelt hospitality unite to make every family gathering special.
       </blockquote>
-      <div class="atmosphere-signature">Aashri Pure Veg Restaurant & Banquet • Nagpur</div>
+      <div class="atmosphere-signature">Aashri Pure Veg Restaurant &amp; Banquet • Nagpur</div>
     </div>
   </section>
 
   <!-- ========================================================================
-       CHAPTER VII — FIND US & CONNECT (LOCATION, MAP, RESERVATIONS)
+       LOCATION & RESERVATIONS
        ======================================================================== -->
-  <section class="findus-section" id="findus" data-chapter="findus">
+  <section class="section" id="contact">
     <div class="container">
       <div class="section-header reveal-on-scroll">
-        <div class="section-badge">Location & Reservations</div>
-        <h2>Visit Us in Nagpur</h2>
+        <div class="section-badge">Visit &amp; Connect</div>
+        <h2>Find Us in Nagpur</h2>
         <p class="section-subtitle">
-          Conveniently positioned at Mangalmurti Square, near Hingna T Point and Subhash Nagar.
+          Conveniently located at Mangalmurti Square, near Hingna T-Point and Subhash Nagar.
         </p>
       </div>
 
@@ -713,45 +687,45 @@
               <div class="info-details">
                 <h4>Address</h4>
                 <p>
-                  <strong>Aashri Pure Veg Restaurant & Banquet</strong><br>
+                  <strong>Aashri Pure Veg Restaurant &amp; Banquet</strong><br>
                   Mangalmurti Square, Rajendra Nagar, Takli Seem,<br>
-                  Nagpur, Maharashtra 440036, India
+                  Nagpur, Maharashtra 440036
                 </p>
-                <p style="font-size: 0.8rem; color: var(--color-gold);">Landmark: Near Hingna T-Point / Subhash Nagar corridor</p>
+                <p style="font-size: 0.8rem; color: var(--color-gold);">Near Hingna T-Point Corridor</p>
               </div>
             </div>
 
             <div class="info-item">
               <div class="info-icon-gold">📞</div>
               <div class="info-details">
-                <h4>Telephone & Enquiries</h4>
+                <h4>Telephone &amp; Booking</h4>
                 <a href="tel:+918806859456" class="info-phone-link">+91 88068 59456</a>
-                <p style="font-size: 0.8rem; margin-top: 4px;">Click to call directly for table bookings & banquet consultations</p>
+                <p style="font-size: 0.8rem; margin-top: 3px;">Click to call directly for table bookings &amp; banquets</p>
               </div>
             </div>
 
             <div class="info-item">
               <div class="info-icon-gold">🕒</div>
               <div class="info-details">
-                <h4>Operating Hours</h4>
+                <h4>Hours of Operation</h4>
                 <p><strong>Open All 7 Days</strong></p>
                 <p>Lunch Session: <strong>11:30 AM – 3:30 PM</strong></p>
                 <p>Dinner Session: <strong>6:30 PM – 11:00 PM</strong></p>
               </div>
             </div>
 
-            <div class="info-item" style="margin-bottom: 0;">
-              <div class="info-icon-gold">✨</div>
+            <div class="info-item">
+              <div class="info-icon-gold">✦</div>
               <div class="info-details">
-                <h4>Dining Amenities</h4>
-                <p>Air-Conditioned Dining • Private Banquet Floor • Wheelchair Accessible Entrance & Seating • High-Speed Elevator • Parking & Valet</p>
+                <h4>Guest Amenities</h4>
+                <p>Full Air Conditioning • Private Banquet Floor • Passenger Elevator • Valet Parking • Wheelchair Accessible</p>
               </div>
             </div>
           </div>
 
-          <div style="margin-top: 2.5rem; display: flex; gap: 1rem; flex-wrap: wrap;">
+          <div style="margin-top: 2rem; display: flex; gap: 1rem; flex-wrap: wrap;">
             <a href="https://www.google.com/maps?q=21.1178389,79.0338501" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
-              Get Google Maps Directions ↗
+              Open Google Maps Directions ↗
             </a>
             <button type="button" class="btn btn-secondary btn-sm trigger-reserve-modal">
               Reserve a Table
@@ -759,7 +733,7 @@
           </div>
         </div>
 
-        <!-- Embedded Interactive Google Map -->
+        <!-- Google Map Iframe -->
         <div class="map-container reveal-on-scroll">
           <iframe 
             src="https://maps.google.com/maps?q=21.1178389,79.0338501&hl=en&z=16&output=embed"
@@ -781,34 +755,40 @@
     <div class="container">
       <div class="footer-top">
         
-        <!-- Brand Summary -->
+        <!-- Brand -->
         <div class="footer-brand">
-          <div style="display: flex; align-items: center; gap: 0.8rem; margin-bottom: 1rem;">
-            <img src="assets/images/aashri_royal_crest.webp" alt="Aashri Logo Crest" style="width: 48px; height: 48px;">
+          <div style="display: flex; align-items: center; gap: 0.8rem; margin-bottom: 0.8rem;">
+            <img src="assets/images/aashri_royal_crest.webp" alt="Aashri Logo" style="width: 44px; height: 44px;">
             <div>
               <h3>AASHRI</h3>
-              <span style="font-size: 0.65rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--color-gold);">PURE VEG & BANQUET</span>
+              <span style="font-size: 0.65rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--color-gold);">PURE VEG &amp; BANQUET</span>
             </div>
           </div>
           <p>
             Nagpur's signature destination for celebratory pure vegetarian dining, artisanal starters, paneer specialties, and majestic banquet events.
           </p>
           <div style="margin-top: 1.5rem; display: flex; gap: 0.8rem;">
-            <a href="tel:+918806859456" class="btn-icon" aria-label="Call Aashri">📞</a>
-            <a href="https://wa.me/918806859456" target="_blank" rel="noopener" class="btn-icon" aria-label="WhatsApp Aashri">💬</a>
-            <a href="https://www.google.com/maps?q=21.1178389,79.0338501" target="_blank" rel="noopener" class="btn-icon" aria-label="Google Maps Directions">📍</a>
+            <a href="tel:+918806859456" class="header-phone-link" style="padding: 0.5rem 0.9rem;" title="Call Aashri">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+              <span>Call Us</span>
+            </a>
+            <a href="https://wa.me/918806859456" target="_blank" rel="noopener" class="header-phone-link" style="padding: 0.5rem 0.9rem; color: #48bb78; border-color: rgba(72,187,120,0.3);">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.03 14.69 2 12.04 2M12.05 3.67C14.25 3.67 16.31 4.53 17.87 6.09C19.42 7.65 20.28 9.72 20.28 11.92C20.28 16.46 16.58 20.15 12.04 20.15C10.56 20.15 9.11 19.76 7.85 19L7.55 18.83L4.43 19.65L5.26 16.61L5.06 16.29C4.24 14.99 3.81 13.47 3.81 11.91C3.81 7.37 7.5 3.67 12.05 3.67Z"></path></svg>
+              <span>WhatsApp</span>
+            </a>
           </div>
         </div>
 
-        <!-- Navigation Links -->
+        <!-- Links -->
         <div class="footer-col">
-          <h5>Experience</h5>
+          <h5>Navigation</h5>
           <ul class="footer-links">
-            <li><a href="#prologue">Prologue</a></li>
-            <li><a href="#experience">The Aashri Story</a></li>
-            <li><a href="menu.html">Full Digital Menu</a></li>
-            <li><a href="gallery.html">Visual Archives</a></li>
-            <li><a href="banquet.html">Banquet & Weddings</a></li>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#story">Our Story</a></li>
+            <li><a href="menu.html">Full Menu</a></li>
+            <li><a href="banquet.html">Banquet Hall</a></li>
+            <li><a href="gallery.html">Photo Gallery</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
           </ul>
         </div>
 
@@ -817,23 +797,23 @@
           <h5>Cuisines</h5>
           <ul class="footer-links">
             <li><a href="menu.html#paneer">Paneer Specialities</a></li>
-            <li><a href="menu.html#starters">Gourmet Starters</a></li>
-            <li><a href="menu.html#mains">Indian Main Course</a></li>
-            <li><a href="menu.html#chinese">Indo-Chinese Delights</a></li>
-            <li><a href="menu.html#drinks">Theatrical Mocktails</a></li>
+            <li><a href="menu.html#starters">Tandoori Starters</a></li>
+            <li><a href="menu.html#mains">North Indian Curries</a></li>
+            <li><a href="menu.html#chinese">Indo-Chinese Dishes</a></li>
+            <li><a href="menu.html#drinks">Sunset Mocktails</a></li>
           </ul>
         </div>
 
-        <!-- Verified Contact Details -->
+        <!-- Venue info -->
         <div class="footer-col">
           <h5>Nagpur Venue</h5>
-          <p style="font-size: 0.82rem; color: var(--color-ivory-dim); line-height: 1.6; margin-bottom: 0.6rem;">
+          <p style="font-size: 0.84rem; color: var(--text-muted); line-height: 1.6; margin-bottom: 0.6rem;">
             Mangalmurti Square, Rajendra Nagar, Takli Seem, Nagpur, Maharashtra 440036
           </p>
-          <p style="font-size: 0.82rem; margin-bottom: 0.4rem;">
-            Direct: <a href="tel:+918806859456" style="color: var(--color-gold); font-weight: 600;">+91 88068 59456</a>
+          <p style="font-size: 0.84rem; margin-bottom: 0.4rem;">
+            Phone: <a href="tel:+918806859456" style="color: var(--color-gold); font-weight: 600;">+91 88068 59456</a>
           </p>
-          <p style="font-size: 0.82rem; color: var(--color-ivory-dim);">
+          <p style="font-size: 0.84rem; color: var(--text-muted);">
             Lunch: 11:30 AM – 3:30 PM<br>
             Dinner: 6:30 PM – 11:00 PM
           </p>
@@ -843,10 +823,10 @@
 
       <div class="footer-bottom">
         <div>
-          © 2026 Aashri Pure Veg Restaurant & Banquet. All verified rights reserved.
+          © 2026 Aashri Pure Veg Restaurant &amp; Banquet. All rights reserved.
         </div>
         <div style="display: flex; gap: 1.5rem;">
-          <a href="contact.html">Privacy & Policies</a>
+          <a href="contact.html">Privacy Policy</a>
           <a href="banquet.html">Banquet Terms</a>
           <a href="contact.html">Directions</a>
         </div>
@@ -854,24 +834,24 @@
     </div>
   </footer>
 
-  <!-- Floating Direct Contact Shortcuts -->
+  <!-- Refined Floating Contact Shortcuts -->
   <div class="floating-actions">
-    <a href="https://wa.me/918806859456?text=Hi%2C%20I%20would%20like%20to%20enquire%20about%20table%20reservation%20%2F%20banquet%20booking%20at%20Aashri" 
+    <a href="https://wa.me/918806859456?text=Hi%20Aashri%20Restaurant!%20I%20would%20like%20to%20enquire%20about%20a%20table%20reservation%20or%20banquet%20booking." 
        target="_blank" 
        rel="noopener" 
        class="float-btn float-whatsapp" 
-       title="Enquire on WhatsApp">
-      💬
+       aria-label="Enquire on WhatsApp">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.03 14.69 2 12.04 2M12.05 3.67C14.25 3.67 16.31 4.53 17.87 6.09C19.42 7.65 20.28 9.72 20.28 11.92C20.28 16.46 16.58 20.15 12.04 20.15C10.56 20.15 9.11 19.76 7.85 19L7.55 18.83L4.43 19.65L5.26 16.61L5.06 16.29C4.24 14.99 3.81 13.47 3.81 11.91C3.81 7.37 7.5 3.67 12.05 3.67Z"></path></svg>
     </a>
     <a href="tel:+918806859456" 
        class="float-btn float-call" 
-       title="Call Aashri Restaurant Directly">
-      📞
+       aria-label="Call Aashri Restaurant Directly">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
     </a>
   </div>
 
   <!-- ========================================================================
-       MODAL 1: LIGHTBOX MODAL (FULLSCREEN GALLERY VIEWER)
+       MODAL 1: GALLERY LIGHTBOX
        ======================================================================== -->
   <div class="modal-backdrop" id="lightboxModal">
     <div class="modal-container lightbox-modal">
@@ -883,8 +863,8 @@
         <img src="" alt="" class="lightbox-img" id="lightboxImg">
       </div>
       <div class="lightbox-caption">
-        <span id="lightboxCategory" style="font-size: 0.72rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--color-gold); font-weight: 600;"></span>
-        <h4 id="lightboxTitle" style="margin-top: 0.4rem;"></h4>
+        <span id="lightboxCategory" style="font-size: 0.72rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--color-gold); font-weight: 600;"></span>
+        <h4 id="lightboxTitle" style="margin-top: 0.3rem;"></h4>
       </div>
     </div>
   </div>
@@ -894,12 +874,12 @@
        ======================================================================== -->
   <div class="modal-backdrop" id="reservationModal">
     <div class="modal-container">
-      <button class="modal-close-btn modal-close-trigger" aria-label="Close Reservation Modal">✕</button>
+      <button class="modal-close-btn modal-close-trigger" aria-label="Close Modal">✕</button>
       
       <div class="form-header">
-        <div class="section-badge">Reserve Your Experience</div>
-        <h3>Book a Dining Table</h3>
-        <p>Reserve in advance to experience our pure vegetarian cuisine and attentive hospitality.</p>
+        <div class="section-badge">Direct Table Booking</div>
+        <h3>Reserve Your Table</h3>
+        <p>Book your dining table in advance with automatic WhatsApp confirmation.</p>
       </div>
 
       <form id="tableReservationForm">
@@ -918,9 +898,9 @@
           <div class="form-group">
             <label class="form-label" for="resGuests">Number of Guests *</label>
             <select id="resGuests" name="guests" class="form-select" required>
-              <option value="2 Guests">2 Guests (Intimate Dining)</option>
+              <option value="2 Guests">2 Guests (Couple Table)</option>
               <option value="4 Guests" selected>4 Guests (Family Table)</option>
-              <option value="6 Guests">6 Guests (Large Table)</option>
+              <option value="6 Guests">6 Guests (Group Table)</option>
               <option value="8+ Guests">8+ Guests (Celebration Table)</option>
             </select>
           </div>
@@ -931,7 +911,7 @@
           </div>
 
           <div class="form-group full-width">
-            <label class="form-label" for="resTime">Preferred Slot *</label>
+            <label class="form-label" for="resTime">Preferred Dining Slot *</label>
             <select id="resTime" name="time" class="form-select" required>
               <option value="Lunch (12:30 PM)">Lunch Session — 12:30 PM</option>
               <option value="Lunch (01:30 PM)">Lunch Session — 01:30 PM</option>
@@ -942,13 +922,13 @@
           </div>
 
           <div class="form-group full-width">
-            <label class="form-label" for="resNotes">Special Dietary or Seating Requests</label>
-            <textarea id="resNotes" name="notes" class="form-textarea" placeholder="Jain preparation requirements, high chair for toddlers, window booth seating preference..."></textarea>
+            <label class="form-label" for="resNotes">Special Requests (Optional)</label>
+            <textarea id="resNotes" name="notes" class="form-textarea" placeholder="Jain food requirement, high chair for kids, quiet booth seating..."></textarea>
           </div>
 
           <div class="form-group full-width" style="margin-top: 0.5rem;">
             <button type="submit" class="btn btn-primary" style="width: 100%;">
-              Confirm Table Reservation & WhatsApp Sync →
+              Confirm Table Reservation →
             </button>
           </div>
 

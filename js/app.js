@@ -1,12 +1,12 @@
 /**
  * AASHRI PURE VEG RESTAURANT & BANQUET
- * Interactive Luxury Experience & Storytelling Logic
+ * High-Performance Interactive Hospitality Logic
+ * Zero Slop • Pure Vanilla JavaScript
  */
 
 document.addEventListener('DOMContentLoaded', () => {
-  initScrollEffects();
-  initChapterTracking();
-  initAmbientAudio();
+  initStickyHeader();
+  initScrollReveals();
   initMenuFiltering();
   initGalleryLightbox();
   initFormsAndModals();
@@ -14,176 +14,73 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 /* ==========================================================================
-   SCROLL EFFECTS & REVEALS
+   STICKY HEADER & SCROLL BEHAVIOR
    ========================================================================== */
-function initScrollEffects() {
-  const progressBar = document.querySelector('.scroll-progress-bar');
+function initStickyHeader() {
   const header = document.querySelector('.header');
-  const revealElements = document.querySelectorAll('.reveal-on-scroll');
+  if (!header) return;
 
-  // Scroll Progress & Sticky Header
-  window.addEventListener('scroll', () => {
-    const totalHeight = document.documentElement.scrollHeight - window.innerHeight;
-    const progress = totalHeight > 0 ? (window.scrollY / totalHeight) * 100 : 0;
-    if (progressBar) {
-      progressBar.style.width = `${progress}%`;
+  const handleScroll = () => {
+    if (window.scrollY > 40) {
+      header.classList.add('scrolled');
+    } else {
+      header.classList.remove('scrolled');
     }
-
-    if (header) {
-      if (window.scrollY > 50) {
-        header.classList.add('scrolled');
-      } else {
-        header.classList.remove('scrolled');
-      }
-    }
-  }, { passive: true });
-
-  // IntersectionObserver for elements
-  const observerOptions = {
-    threshold: 0.15,
-    rootMargin: '0px 0px -50px 0px'
   };
 
-  const revealObserver = new IntersectionObserver((entries, observer) => {
+  window.addEventListener('scroll', handleScroll, { passive: true });
+  handleScroll();
+}
+
+/* ==========================================================================
+   INTERSECTION OBSERVER SCROLL REVEALS
+   ========================================================================== */
+function initScrollReveals() {
+  const revealElements = document.querySelectorAll('.reveal-on-scroll');
+  if (!revealElements.length) return;
+
+  const observer = new IntersectionObserver((entries, obs) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         entry.target.classList.add('revealed');
-        observer.unobserve(entry.target);
+        obs.unobserve(entry.target);
       }
     });
-  }, observerOptions);
+  }, {
+    threshold: 0.1,
+    rootMargin: '0px 0px -40px 0px'
+  });
 
-  revealElements.forEach(el => revealObserver.observe(el));
+  revealElements.forEach(el => observer.observe(el));
 }
 
 /* ==========================================================================
-   PERSEPOLIS-INSPIRED CHAPTER TRACKING
-   ========================================================================== */
-function initChapterTracking() {
-  const chapters = document.querySelectorAll('[data-chapter]');
-  const chapterDots = document.querySelectorAll('.chapter-dot');
-
-  if (!chapters.length || !chapterDots.length) return;
-
-  const chapterObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        const currentChapter = entry.target.getAttribute('data-chapter');
-        chapterDots.forEach(dot => {
-          if (dot.getAttribute('data-target') === currentChapter) {
-            dot.classList.add('active');
-          } else {
-            dot.classList.remove('active');
-          }
-        });
-      }
-    });
-  }, { threshold: 0.35 });
-
-  chapters.forEach(ch => chapterObserver.observe(ch));
-
-  chapterDots.forEach(dot => {
-    dot.addEventListener('click', () => {
-      const targetId = dot.getAttribute('data-target');
-      const targetEl = document.getElementById(targetId);
-      if (targetEl) {
-        targetEl.scrollIntoView({ behavior: 'smooth' });
-      }
-    });
-  });
-}
-
-/* ==========================================================================
-   AMBIENT AUDIO SYNTHESIZER (WEB AUDIO API)
-   Generates a tranquil, luxurious ambient acoustic drone
-   ========================================================================== */
-let audioCtx = null;
-let masterGain = null;
-let isAudioPlaying = false;
-let oscillators = [];
-
-function initAmbientAudio() {
-  const toggleBtn = document.getElementById('audioToggleBtn');
-  if (!toggleBtn) return;
-
-  toggleBtn.addEventListener('click', () => {
-    if (!audioCtx) {
-      createAmbientSoundscape();
-    }
-
-    if (isAudioPlaying) {
-      masterGain.gain.setTargetAtTime(0, audioCtx.currentTime, 0.5);
-      toggleBtn.classList.remove('playing');
-      const label = toggleBtn.querySelector('.audio-label');
-      if (label) label.textContent = 'Atmosphere: Off';
-      isAudioPlaying = false;
-    } else {
-      if (audioCtx.state === 'suspended') {
-        audioCtx.resume();
-      }
-      masterGain.gain.setTargetAtTime(0.04, audioCtx.currentTime, 0.5);
-      toggleBtn.classList.add('playing');
-      const label = toggleBtn.querySelector('.audio-label');
-      if (label) label.textContent = 'Atmosphere: On';
-      isAudioPlaying = true;
-      showToast('Soundscape activated: Warm hospitality ambience');
-    }
-  });
-}
-
-function createAmbientSoundscape() {
-  const AudioContext = window.AudioContext || window.webkitAudioContext;
-  audioCtx = new AudioContext();
-
-  masterGain = audioCtx.createGain();
-  masterGain.gain.setValueAtTime(0, audioCtx.currentTime);
-  masterGain.connect(audioCtx.destination);
-
-  // Harmonic chord of Indian classical Sa-Pa drone (C3, G3, C4, E4)
-  const freqs = [130.81, 196.00, 261.63, 329.63];
-
-  freqs.forEach((freq, idx) => {
-    const osc = audioCtx.createOscillator();
-    const oscGain = audioCtx.createGain();
-    const filter = audioCtx.createBiquadFilter();
-
-    osc.type = idx % 2 === 0 ? 'sine' : 'triangle';
-    osc.frequency.setValueAtTime(freq, audioCtx.currentTime);
-
-    // Warm low-pass filter
-    filter.type = 'lowpass';
-    filter.frequency.setValueAtTime(450 + (idx * 50), audioCtx.currentTime);
-
-    oscGain.gain.setValueAtTime(0.25 / freqs.length, audioCtx.currentTime);
-
-    osc.connect(filter);
-    filter.connect(oscGain);
-    oscGain.connect(masterGain);
-
-    osc.start();
-    oscillators.push(osc);
-  });
-}
-
-/* ==========================================================================
-   MENU FILTERING & MODAL DETAILS
+   MENU FILTERING TABS
    ========================================================================== */
 function initMenuFiltering() {
   const tabs = document.querySelectorAll('.menu-tab-btn');
   const cards = document.querySelectorAll('.menu-card');
+
+  if (!tabs.length || !cards.length) return;
 
   tabs.forEach(tab => {
     tab.addEventListener('click', () => {
       tabs.forEach(t => t.classList.remove('active'));
       tab.classList.add('active');
 
-      const filterCategory = tab.getAttribute('data-category');
+      const filter = tab.getAttribute('data-category');
 
       cards.forEach(card => {
         const itemCategory = card.getAttribute('data-category');
-        if (filterCategory === 'all' || itemCategory === filterCategory) {
+        if (filter === 'all' || itemCategory === filter) {
           card.style.display = 'flex';
-          card.style.animation = 'fadeInUp 0.4s ease forwards';
+          card.style.opacity = '0';
+          card.style.transform = 'translateY(10px)';
+          requestAnimationFrame(() => {
+            card.style.transition = 'opacity 0.35s ease, transform 0.35s ease';
+            card.style.opacity = '1';
+            card.style.transform = 'translateY(0)';
+          });
         } else {
           card.style.display = 'none';
         }
@@ -210,7 +107,6 @@ function initGalleryLightbox() {
 
   if (!lightboxModal || !galleryItems.length) return;
 
-  // Build image list
   galleryImagesList = Array.from(galleryItems).map(item => {
     const img = item.querySelector('img');
     const tag = item.querySelector('.gallery-caption-tag')?.textContent || 'Aashri Gallery';
@@ -279,7 +175,6 @@ function initGalleryLightbox() {
     }
   });
 
-  // Keyboard navigation
   window.addEventListener('keydown', (e) => {
     if (!lightboxModal.classList.contains('open')) return;
     if (e.key === 'Escape') closeLightbox();
@@ -292,13 +187,11 @@ function initGalleryLightbox() {
    FORMS, RESERVATIONS & MODALS
    ========================================================================== */
 function initFormsAndModals() {
-  // Banquet Enquiry Form
   const banquetForm = document.getElementById('banquetEnquiryForm');
   if (banquetForm) {
     banquetForm.addEventListener('submit', handleBanquetSubmit);
   }
 
-  // Reservation Modal & Trigger
   const reservationModal = document.getElementById('reservationModal');
   const reserveBtns = document.querySelectorAll('.trigger-reserve-modal');
   const modalCloseBtns = document.querySelectorAll('.modal-close-trigger');
@@ -332,23 +225,33 @@ function initFormsAndModals() {
     });
   });
 
-  // Table Reservation Form Submission
   const tableForm = document.getElementById('tableReservationForm');
   if (tableForm) {
     tableForm.addEventListener('submit', (e) => {
       e.preventDefault();
       const name = tableForm.querySelector('[name="name"]')?.value || 'Guest';
-      const guests = tableForm.querySelector('[name="guests"]')?.value || '2';
-      const time = tableForm.querySelector('[name="time"]')?.value || 'Today';
+      const phone = tableForm.querySelector('[name="phone"]')?.value || '';
+      const guests = tableForm.querySelector('[name="guests"]')?.value || '2 Guests';
+      const date = tableForm.querySelector('[name="date"]')?.value || 'Today';
+      const time = tableForm.querySelector('[name="time"]')?.value || 'Dinner';
+      const notes = tableForm.querySelector('[name="notes"]')?.value || '';
+
+      const phoneClean = phone.replace(/\D/g, '');
+      if (phoneClean.length < 10) {
+        showToast('Please enter a valid 10-digit phone number');
+        return;
+      }
 
       const token = 'TAB-' + Math.floor(1000 + Math.random() * 9000);
-      showToast(`Reservation Confirmed #${token} for ${name} (${guests} Guests at ${time})`);
+      showToast(`Reservation Confirmed #${token} for ${name}`);
 
-      // WhatsApp link preparation
-      const waText = encodeURIComponent(`Hi Aashri Restaurant! I would like to book a table for ${guests} guests at ${time}. Name: ${name} (Ref: ${token})`);
+      const waMsg = encodeURIComponent(
+        `Hello Aashri Pure Veg Restaurant Nagpur!\nI would like to reserve a table:\n- Booking ID: ${token}\n- Name: ${name}\n- Phone: ${phone}\n- Guests: ${guests}\n- Date: ${date}\n- Slot: ${time}${notes ? '\n- Notes: ' + notes : ''}`
+      );
+
       setTimeout(() => {
-        window.open(`https://wa.me/918806859456?text=${waText}`, '_blank');
-      }, 900);
+        window.open(`https://wa.me/918806859456?text=${waMsg}`, '_blank');
+      }, 800);
 
       if (reservationModal) reservationModal.classList.remove('open');
       document.body.style.overflow = '';
@@ -360,42 +263,44 @@ function initFormsAndModals() {
 function handleBanquetSubmit(e) {
   e.preventDefault();
   const form = e.target;
-  const name = form.querySelector('[name="name"]').value;
-  const phone = form.querySelector('[name="phone"]').value;
+  const name = form.querySelector('[name="name"]').value.trim();
+  const phone = form.querySelector('[name="phone"]').value.trim();
   const occasion = form.querySelector('[name="occasion"]').value;
   const guests = form.querySelector('[name="guests"]').value;
   const date = form.querySelector('[name="date"]').value;
-  const notes = form.querySelector('[name="notes"]').value;
+  const notes = form.querySelector('[name="notes"]')?.value || '';
 
-  // Validation
   const phoneClean = phone.replace(/\D/g, '');
   if (phoneClean.length < 10) {
     showToast('Please enter a valid 10-digit phone number');
     return;
   }
 
-  const token = 'AASHRI-EVT-' + Math.floor(10000 + Math.random() * 90000);
+  const token = 'EVT-' + Math.floor(10000 + Math.random() * 90000);
   const feedbackEl = document.getElementById('banquetFeedback');
+
+  const waMsg = encodeURIComponent(
+    `Hello Aashri Banquet Team!\nI have submitted an event enquiry:\n- Reference: ${token}\n- Name: ${name}\n- Phone: ${phone}\n- Occasion: ${occasion}\n- Guest Count: ${guests}\n- Date: ${date}${notes ? '\n- Special Requests: ' + notes : ''}`
+  );
 
   if (feedbackEl) {
     feedbackEl.innerHTML = `
-      <div style="font-weight: 600; font-size: 1.05rem; margin-bottom: 0.4rem; color: #68d391;">
-        ✓ Enquiry Received (Ref: ${token})
+      <div style="font-weight: 600; font-size: 1rem; color: #48bb78; margin-bottom: 0.3rem;">
+        ✓ Event Enquiry Received (Ref: ${token})
       </div>
-      <p style="margin-bottom: 0.8rem; font-size: 0.85rem; color: #ede6d6;">
-        Thank you, <strong>${name}</strong>. Our banquet coordinator will contact you at <strong>${phone}</strong> shortly to discuss details for your <strong>${occasion}</strong> on <strong>${date}</strong>.
+      <p style="font-size: 0.84rem; color: #FAF7F2; margin-bottom: 0.75rem;">
+        Thank you, <strong>${name}</strong>. Our banquet coordinator will contact you at <strong>${phone}</strong> shortly.
       </p>
-      <a href="https://wa.me/918806859456?text=${encodeURIComponent(`Hi Aashri Banquet! I have submitted an event enquiry for ${occasion} on ${date} for ${guests} guests. Reference: ${token}, Name: ${name}`)}" 
+      <a href="https://wa.me/918806859456?text=${waMsg}" 
          target="_blank" 
-         class="btn btn-sm btn-primary" 
-         style="margin-top: 0.4rem;">
-        Confirm Instantly on WhatsApp →
+         class="btn btn-sm btn-primary">
+        Connect Instantly on WhatsApp →
       </a>
     `;
     feedbackEl.style.display = 'block';
   }
 
-  showToast(`Banquet Enquiry #${token} Registered!`);
+  showToast(`Banquet Enquiry #${token} Submitted!`);
   form.reset();
 }
 
@@ -449,16 +354,16 @@ function showToast(message) {
   const toast = document.createElement('div');
   toast.className = 'toast';
   toast.innerHTML = `
-    <span style="color: var(--color-gold); font-size: 1.1rem;">◈</span>
+    <span style="color: var(--color-gold); font-size: 1rem;">✦</span>
     <span>${message}</span>
   `;
 
   container.appendChild(toast);
 
   setTimeout(() => {
-    toast.style.transition = 'opacity 0.4s ease, transform 0.4s ease';
+    toast.style.transition = 'opacity 0.35s ease, transform 0.35s ease';
     toast.style.opacity = '0';
-    toast.style.transform = 'translateX(-20px)';
-    setTimeout(() => toast.remove(), 400);
-  }, 4200);
+    toast.style.transform = 'translateY(10px)';
+    setTimeout(() => toast.remove(), 350);
+  }, 4000);
 }
